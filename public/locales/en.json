@@ -1,0 +1,189 @@
+{
+  "home": {
+    "title": "Welcome to Our Window Services",
+    "description": "We specialize in window renovation and painting in Stockholm."
+  },
+  "about": {
+    "title": "About Us",
+    "description": "We are a dedicated team of professionals specializing in window renovation and painting services in Stockholm."
+  },
+  "projects": {
+    "title": "Our Projects",
+    "list": [
+      {
+        "title": "Window Renovation for Historical Building",
+        "images": [
+          {
+            "src": "/assets/project1/1.jpg",
+            "width": 800,
+            "height": 600
+          },
+          {
+            "src": "/assets/project1/2.jpg",
+            "width": 800,
+            "height": 600
+          },
+          {
+            "src": "/assets/project1/3.jpg",
+            "width": 800,
+            "height": 600
+          },
+          {
+            "src": "/assets/project1/4.jpg",
+            "width": 800,
+            "height": 600
+          },
+          {
+            "src": "/assets/project1/5.jpg",
+            "width": 800,
+            "height": 600
+          }
+        ]
+      },
+      {
+        "title": "Exterior Painting for Modern Apartment Complex",
+        "images": [
+          {
+            "src": "/assets/project2/1.jpg",
+            "width": 800,
+            "height": 600
+          },
+          {
+            "src": "/assets/project2/2.jpg",
+            "width": 800,
+            "height": 600
+          },
+          {
+            "src": "/assets/project2/3.jpg",
+            "width": 800,
+            "height": 600
+          },
+          {
+            "src": "/assets/project2/4.jpg",
+            "width": 800,
+            "height": 600
+          }
+        ]
+      },
+      {
+        "title": "Custom Window Installation for Eco-Friendly Home",
+        "images": [
+          {
+            "src": "/assets/project3/1.jpg",
+            "width": 800,
+            "height": 600
+          },
+          {
+            "src": "/assets/project3/2.jpg",
+            "width": 800,
+            "height": 600
+          },
+          {
+            "src": "/assets/project3/3.jpg",
+            "width": 800,
+            "height": 600
+          }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact Us",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send"
+  },
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "footer": {
+    "title": "Best window renovation and painting services in Stockholm",
+    "contact": "Contact us",
+    "phone": "+46 123 456 789",
+    "email": "info@prietos.se",
+    "openingHours": "Mon-Fri: 8:00-17:00",
+    "address": "Storgatan 1, 111 23 Stockholm",
+    "copyright": "© 2024 Window Renovation and Painting Services. All rights reserved.",
+    "followUs": "Follow Us",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "legal": "Legal",
+    "termsAndConditions": "Terms and Conditions",
+    "privacyPolicy": "Privacy Policy",
+    "allRightsReserved": "All rights reserved."
+  },
+  "hero": {
+    "title": "Prietos Kompaniet",
+    "subtitle": "We guarantee the quality of your windows",
+    "point1": "Professional window renovation",
+    "point2": "Experienced craftsmen",
+    "point3": "High-quality materials",
+    "point4": "Customer satisfaction guaranteed",
+    "videoError": "Your browser does not support the video tag."
+  },
+  "imageComparison": {
+    "title": "Before and After",
+    "description": "Get in touch with us for professional window renovation & window painting in Stockholm."
+  },
+  "share": {
+    "title": "Share"
+  },
+  "services": {
+    "title": "Our Services",
+    "description": "We offer professional window renovation and painting services in Stockholm. Our experienced craftsmen use high-quality materials to ensure quality and customer satisfaction.",
+    "service1Title": "Window renovation",
+    "service1Description": "Renovation and painting of all types of windows. Replacement of energy-saving glass for better insulation",
+    "service2Title": "Environmental friendly",
+    "service2Description": "Environmental-friendly color and product choices. Sustainable renovation that protects the environment",
+    "service3Title": "ROT deduction",
+    "service3Description": "High-quality products and materials. Professional workmanship and attention to detail",
+    "CTA": "Book a free consultation"
+  },
+  "aboutUs": {
+    "title": "About Us",
+    "slogan": "Best Windows in Stockholm",
+    "images": [
+      {
+        "src": "/assets/about/1.jpg",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/about/2.jpg",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/about/3.jpg",
+        "width": 800,
+        "height": 600
+      }
+    ],
+    "descriptions": [
+      "Prietos Company is a company created from an idea of improvement in pursuit of creating something superior based on the professional talent acquired over several years, then that idea was reinforced with discipline and effort.",
+      "It was started by one person and today we have the support of several very competent workers in the renovation market. It is a company that is very supportive in the fight to preserve the ecosystem through renewable production with products authorized by the work environment",
+      "For us, the satisfaction of our customers and their perception of our work after completion of the work is very important. We believe that the customer has the highest priority in deciding on their product, along with our experience in the market."
+    ]
+  },
+  "contactForm": {
+    "title": "Contact Us",
+    "or": "or",
+    "label": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send",
+      "phone": "Phone Number"
+    },
+    "placeholder": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "message": "Your Message",
+      "phone": "Your Phone Number"
+    }
+  }
+}
