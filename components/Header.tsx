@@ -14,7 +14,6 @@ export default function Header({ lang }: { lang: string }) {
     const t = getTranslations(lang);
     const [isOpen, setIsOpen] = useState(false)
 
-    const toggleMenu = () => setIsOpen(!isOpen)
 
     const navItems = [t.header.home, t.header.about, t.header.projects, t.header.contact]
     const navLinks = ["/home", "/about", "/projects", "/contact"]

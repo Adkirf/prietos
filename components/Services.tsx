@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { HousePlus, Leaf, PiggyBank } from 'lucide-react'
 import { getTranslations } from '@/lib/utils';
 

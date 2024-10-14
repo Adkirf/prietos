@@ -1,5 +1,4 @@
 import { AboutUs } from '@/components/AboutUs';
-import { getTranslations } from '@/lib/utils';
 
 // About page component for the multilingual website
 // This component renders the content for the About page in the specified language

@@ -21,7 +21,7 @@ const ProjectSection = ({ project, isActive, projectIndex, lang }: { project: Pr
   const imageRefs = useRef<(HTMLDivElement | null)[]>([])
 
   useEffect(() => {
-    const observers = imageRefs.current.map((ref, index) => {
+    const observers = imageRefs.current.map((ref) => {
       if (ref) {
         const observer = new IntersectionObserver(
           (entries) => {

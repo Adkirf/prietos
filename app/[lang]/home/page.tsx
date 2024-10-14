@@ -1,4 +1,3 @@
-import { getTranslations } from '@/lib/utils';
 import { Hero } from '@/components/Hero';
 import { ImageComparisonComponent } from '@/components/ImageComparison';
 import Services from '@/components/Services';

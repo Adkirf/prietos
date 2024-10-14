@@ -40,12 +40,17 @@ export function AboutUs({ params: { lang } }: { params: { lang: string } }) {
 
     const observer = new IntersectionObserver(handleIntersection, options)
 
-    if (marker1Ref.current) observer.observe(marker1Ref.current)
-    if (marker2Ref.current) observer.observe(marker2Ref.current)
+    // Store current ref values in variables
+    const marker1 = marker1Ref.current
+    const marker2 = marker2Ref.current
+
+    if (marker1) observer.observe(marker1)
+    if (marker2) observer.observe(marker2)
 
     return () => {
-      if (marker1Ref.current) observer.unobserve(marker1Ref.current)
-      if (marker2Ref.current) observer.unobserve(marker2Ref.current)
+      // Use stored variables in cleanup function
+      if (marker1) observer.unobserve(marker1)
+      if (marker2) observer.unobserve(marker2)
     }
   }, [handleIntersection])
 

@@ -85,7 +85,7 @@ export function FullscreenViewer({
     setCurrentIndex((prev) => (prev < images.length - 1 ? prev + 1 : 0))
   }
 
-  const bind = useDrag(({ movement: [mx, my], offset: [ox, oy], last }) => {
+  const bind = useDrag(({ offset: [ox, oy], last }) => {
     if (zoomLevel > 1) {
       const image = imageRef.current
       if (image) {
