@@ -98,7 +98,8 @@
     "home": "Hem",
     "about": "Om oss",
     "projects": "Projekt",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "logoSrc": "/assets/prietosLogo.png"
   },
   "footer": {
     "title": "Bästa fönsterrenoverings- och målningstjänsterna i Stockholm",

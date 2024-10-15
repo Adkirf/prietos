@@ -55,7 +55,7 @@ export default function Header({ lang }: { lang: string }) {
 
                 <Link href={`/${lang}`} className="flex items-center order-last md:order-first">
                     <Image
-                        src="/assets/Prietoslogo.png"
+                        src={t.header.logoSrc}
                         alt="Prietos Kompaniet Logo"
                         width={150}
                         height={75}

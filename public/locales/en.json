@@ -98,7 +98,8 @@
     "home": "Home",
     "about": "About",
     "projects": "Projects",
-    "contact": "Contact"
+    "contact": "Contact",
+    "logoSrc": "/assets/prietosLogo.png"
   },
   "footer": {
     "title": "Best window renovation and painting services in Stockholm",
