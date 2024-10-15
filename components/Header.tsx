@@ -2,24 +2,30 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Menu } from 'lucide-react'
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
 import LanguageSwitcher from './LanguageSwitcher'
 import { getTranslations } from '@/lib/utils'
 import { ThemeToggle } from './ThemeToggle'
+import { usePathname } from 'next/navigation'
 
 export default function Header({ lang }: { lang: string }) {
     const t = getTranslations(lang);
     const [isOpen, setIsOpen] = useState(false)
+    const [isTransparent, setIsTransparent] = useState(false)
+    const pathname = usePathname()
 
+    useEffect(() => {
+        setIsTransparent(pathname.includes('/home'))
+    }, [pathname])
 
     const navItems = [t.header.home, t.header.about, t.header.projects, t.header.contact]
     const navLinks = ["/home", "/about", "/projects", "/contact"]
 
     return (
-        <header className="bg-black text-white shadow-md">
+        <header className={`${isTransparent ? 'bg-transparent' : 'bg-black'} text-white shadow-md transition-colors duration-300`}>
             <div className="container mx-auto px-4 py-4 flex justify-between items-center">
                 <Sheet open={isOpen} onOpenChange={setIsOpen}>
                     <SheetTrigger asChild>
