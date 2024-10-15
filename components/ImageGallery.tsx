@@ -49,8 +49,8 @@ const ProjectSection = ({ project, isActive, projectIndex, lang }: { project: Pr
   }, [project.images])
 
   return (
-    <div className="mb-16">
-      <div className='sticky  top-0 z-20 bg-background text-foreground flex items-end justify-bottom h-[15vh]'>
+    <div className="mb-16 relative">
+      <div className='sticky top-10 z-20 bg-background text-foreground flex items-end justify-bottom h-[15vh]'>
         <h2
           className={`text-2xl font-bold m transition-all duration-300 ${isActive ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}

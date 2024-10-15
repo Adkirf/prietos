@@ -70,6 +70,10 @@ body {
   }
 }
 
+h1{
+  @apply text-xl text-foreground md:text-2xl lg:text-3xl font-bold mb-8 md:mb-12 lg:mb-16 max-w-3xl;
+}
+
 @layer base {
   * {
     @apply border-border;

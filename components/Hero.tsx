@@ -16,7 +16,7 @@ export function Hero({ params: { lang } }: { params: { lang: string } }) {
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source src="/assets/videohomprieto.mp4" type="video/mp4" />
-        {t.hero.videoError}
+        ˇ
       </video>
 
       {/* Overlay */}
@@ -24,7 +24,7 @@ export function Hero({ params: { lang } }: { params: { lang: string } }) {
 
       {/* Content */}
       <div className="relative z-10 h-full flex flex-col justify-center items-center text-[#EAEAEA] px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-4">
+        <h1 className="text-4xl text-[#EAEAEA] sm:text-5xl md:text-6xl font-bold text-center mb-4">
           {t.hero.title}
         </h1>
         <h2 className="text-xl sm:text-2xl md:text-3xl text-center mb-8">

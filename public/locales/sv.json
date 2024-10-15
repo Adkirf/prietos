@@ -121,29 +121,53 @@
   "hero": {
     "title": "Prietos Kompaniet",
     "subtitle": "Vi garanterar kvaliteten på dina fönster",
-    "point1": "Professionell fönsterrenovering",
-    "point2": "Erfarna hantverkare",
-    "point3": "Högkvalitativa material",
-    "point4": "Kundnöjdhet garanterad",
+    "point1": "Auktoriserade yrkesutövare",
+    "point2": "Målning och renovering av fönster",
+    "point3": "Miljövänliga lösningar",
+    "point4": "Upp till 50.000 kr i skatteförmåner",
     "videoError": "Din webbläsare stöder inte videospelaren."
   },
   "imageComparison": {
-    "title": "Före och After",
-    "description": "Hör av dig till oss för professionell fönsterrenovering & fönstermålning i Stockholm."
+    "title": "För oss är din tillfredsställelse av största vikt.",
+    "description": "Vi strävar efter att kombinera högkvalitativt hantverk med hållbara lösningar för att bevara ekosystemet OCH din plånbok!",
+    "before": {
+      "src": "/assets/before.jpg",
+      "alt": "Före"
+    },
+    "after": {
+      "src": "/assets/after.jpg",
+      "alt": "Efter"
+    }
   },
-  "share": {
-    "title": "Dela"
+  "informative": {
+    "title": "Varför renovera istället för att köpa nytt?",
+    "text1": "Renovating windows instead of buying new ones is usually better for both the environment and your wallet.",
+    "text2": "Old wooden windows are made of high-quality timber and can last for many years after a professional renovation.",
+    "text3": "Or recommended energy glass is designed to reflect long-wave head radiation which keeps up to 50% more warmth inside."
   },
-  "services": {
-    "title": "Våra Tjänster",
-    "description": "Vi erbjuder professionell fönsterrenovering och målningstjänster i Stockholm. Våra erfarna hantverkare använder högkvalitativa material för att säkerställa kvaliteten och kundnöjdheten.",
-    "service1Title": "Fönsterrenovering",
-    "service1Description": "Renovering och målning av alla typer av fönster. Byte av energiglas för bättre isolering",
-    "service2Title": "Miljövänligt",
-    "service2Description": "Miljövänliga färg- och produktval. Hållbar renovering som sparar på miljön",
-    "service3Title": "ROT-avdrag",
-    "service3Description": "Högkvalitativa produkter och material. Professionellt arbete och uppmärksamhet på detaljer",
+  "weCover": {
+    "title": "Vi täcker upp för dig!",
+    "service1Title": "Målning av fönster",
+    "service1Description": "Professionell målning med miljövänlig färg.",
+    "service2Title": "Fönsterrenovering",
+    "service2Description": "Kvalificerade tjänster som skrapning, slipning och kittning.",
+    "service3Title": "Glasbyte",
+    "service3Description": "Vi byter alla typer av glas, inklusive energiglas som sänker energikostnaderna.",
+    "service4Title": "Reparation av rötskador",
+    "service4Description": "Byte av delar eller hela fönsterkarmar vid skador.",
     "CTA": "Boka Gratis Konsultation"
+  },
+  "ourService": {
+    "title": "Vår tjänst",
+    "leftSection": {
+      "title": "Spara pengar med ROT-avdrag",
+      "description": "Reparation och underhåll räknas som ROT-arbete, och du kan få tillbaka upp till 50% av arbetskostnaden, med en maxbelopp av 50 000 kr per person per år."
+    },
+    "rightSection": {
+      "title": "Gratis fönsterputsning",
+      "description": "Efter att vi har renoverat dina fönster, erbjuder vi en fri fönsterrengöringsservice så att du kan njuta av dina fönster."
+    },
+    "CTA": "Kontakta oss"
   },
   "aboutUs": {
     "title": "Om oss",
@@ -163,12 +187,24 @@
         "src": "/assets/about/3.jpg",
         "width": 800,
         "height": 600
+      },
+      {
+        "src": "/assets/about/3.jpg",
+        "width": 800,
+        "height": 600
       }
     ],
     "descriptions": [
-      "Prietos Company är ett företag som startade med en idé om att förbättra saker och skapa något bättre baserat på de professionella färdigheter som har samlats in över många år, därefter har idén förstärkts med disciplin och ansträngning.",
+      "Prietos Company började som en vision - att skapa något överlägset genom många års erfarenhet, förstärkt med disciplin och hårt arbete.",
       "Det startades av en person och idag har vi stöd från flera mycket kompetenta arbetare på renoveringsmarknaden. Det är ett företag som är mycket stött av miljön genom att tillverka renoveringsprodukter med produkter som är godkända av arbetsmiljön.",
-      "För oss är kundens nöjdhet och deras uppfattning av vårt arbete efter att arbetet är klart väldigt viktigt. Vi tror att kunden har högsta prioritet när det gäller att bestämma sina produkter, tillsammans med vår erfarenhet på marknaden."
+      "Vi anser att din plånbok och vår gemensamma miljö måste behandlas på samma sätt - på ett hållbart sätt",
+      "Du berättar vad du behöver, så tar vi hand om allt annat - Vi garanterar bästa kvalitet!"
+    ],
+    "titles": [
+      "Från en vision till ett företag",
+      "Från en person till ett kompetent team",
+      "Hållbarhet i hjärtat",
+      "Kunden först, alltid"
     ]
   },
   "contactForm": {

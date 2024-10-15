@@ -12,6 +12,7 @@ export function AboutUs({ params: { lang } }: { params: { lang: string } }) {
   const containerRef = useRef<HTMLDivElement>(null)
   const marker1Ref = useRef<HTMLDivElement>(null)
   const marker2Ref = useRef<HTMLDivElement>(null)
+  const marker3Ref = useRef<HTMLDivElement>(null)
 
   const handleIntersection = useCallback((entries: IntersectionObserverEntry[]) => {
     entries.forEach((entry) => {
@@ -26,6 +27,12 @@ export function AboutUs({ params: { lang } }: { params: { lang: string } }) {
           setCurrentIndex(2)
         } else if (!entry.isIntersecting && currentIndex === 2) {
           setCurrentIndex(1)
+        }
+      } else if (entry.target === marker3Ref.current) {
+        if (entry.isIntersecting && currentIndex < 3) {
+          setCurrentIndex(3)
+        } else if (!entry.isIntersecting && currentIndex === 3) {
+          setCurrentIndex(2)
         }
       }
     })
@@ -43,14 +50,17 @@ export function AboutUs({ params: { lang } }: { params: { lang: string } }) {
     // Store current ref values in variables
     const marker1 = marker1Ref.current
     const marker2 = marker2Ref.current
+    const marker3 = marker3Ref.current
 
     if (marker1) observer.observe(marker1)
     if (marker2) observer.observe(marker2)
+    if (marker3) observer.observe(marker3)
 
     return () => {
       // Use stored variables in cleanup function
       if (marker1) observer.unobserve(marker1)
       if (marker2) observer.unobserve(marker2)
+      if (marker3) observer.unobserve(marker3)
     }
   }, [handleIntersection])
 
@@ -66,7 +76,7 @@ export function AboutUs({ params: { lang } }: { params: { lang: string } }) {
   }, [currentIndex])
 
   return (
-    <div ref={containerRef} className="container mx-auto px-4 py-16 relative bg-background" style={{ height: '300vh' }}>
+    <div ref={containerRef} className="container mx-auto px-4 py-16 relative bg-background" style={{ height: '400vh' }}>
       <div className="sticky top-0 h-screen flex flex-col items-center justify-center">
         <div className="flex flex-col md:flex-row items-center justify-center">
           <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 mb-8 md:mb-0">
@@ -96,9 +106,13 @@ export function AboutUs({ params: { lang } }: { params: { lang: string } }) {
             </div>
           </div>
           <div className="md:ml-12 lg:ml-16 max-w-md overflow-hidden">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">{t.aboutUs.title}</h2>
+            <h2 className={`text-3xl md:text-4xl font-bold mb-4 text-foreground transition-all ${isAnimating ? 'duration-0' : 'duration-500'} ease-in-out
+              ${isAnimating ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}
+            `}>
+              {t.aboutUs.titles[currentIndex]}
+            </h2>
             <p
-              className={`text-lg text-muted-foreground leading-relaxed transition-all duration-500 ease-in-out
+              className={`text-lg text-muted-foreground leading-relaxed transition-all ${isAnimating ? 'duration-0' : 'duration-500'} ease-in-out
                 ${isAnimating ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}
               `}
             >
@@ -107,7 +121,7 @@ export function AboutUs({ params: { lang } }: { params: { lang: string } }) {
           </div>
         </div>
         <div className="flex justify-center mt-8">
-          {[0, 1, 2].map((index) => (
+          {[0, 1, 2, 3].map((index) => (
             <div
               key={index}
               className={`w-3 h-3 rounded-full mx-1 transition-all duration-300 ${currentIndex === index
@@ -120,6 +134,7 @@ export function AboutUs({ params: { lang } }: { params: { lang: string } }) {
       </div>
       <div ref={marker1Ref} className="h-screen" />
       <div ref={marker2Ref} className="h-screen" />
+      <div ref={marker3Ref} className="h-screen" />
     </div>
   )
 }

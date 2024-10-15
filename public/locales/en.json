@@ -120,32 +120,55 @@
   "hero": {
     "title": "Prietos Kompaniet",
     "subtitle": "We guarantee the quality of your windows",
-    "point1": "Professional window renovation",
-    "point2": "Experienced craftsmen",
-    "point3": "High-quality materials",
-    "point4": "Customer satisfaction guaranteed",
+    "point1": "Authorized professionals",
+    "point2": "Window painting and renovation",
+    "point3": "Environmentally friendly solutions",
+    "point4": "Up to SEK 50,000 Tax Benefits",
     "videoError": "Your browser does not support the video tag."
   },
   "imageComparison": {
-    "title": "Before and After",
-    "description": "Get in touch with us for professional window renovation & window painting in Stockholm."
+    "title": "For us, your satisfaction is paramount.",
+    "description": "We strive to combine high-quality craftsmanship with sustainable solutions to preserve the ecosystem AND your wallet!",
+    "before": {
+      "src": "/assets/before.jpg",
+      "alt": "Before"
+    },
+    "after": {
+      "src": "/assets/after.jpg",
+      "alt": "After"
+    }
   },
-  "share": {
-    "title": "Share"
+  "informative": {
+    "title": "Why renovate instead of buying new?",
+    "text1": "Renovating windows instead of buying new ones is usually better for both the environment and your wallet.",
+    "text2": "Old wooden windows are made of high-quality timber and can last for many years after a professional renovation.",
+    "text3": "Or recommended energy glass is designed to reflect long-wave head radiation which keeps up to 50% more warmth inside."
   },
-  "services": {
-    "title": "Our Services",
-    "description": "We offer professional window renovation and painting services in Stockholm. Our experienced craftsmen use high-quality materials to ensure quality and customer satisfaction.",
-    "service1Title": "Window renovation",
-    "service1Description": "Renovation and painting of all types of windows. Replacement of energy-saving glass for better insulation",
-    "service2Title": "Environmental friendly",
-    "service2Description": "Environmental-friendly color and product choices. Sustainable renovation that protects the environment",
-    "service3Title": "ROT deduction",
-    "service3Description": "High-quality products and materials. Professional workmanship and attention to detail",
+  "weCover": {
+    "title": "We got you covered!",
+    "service1Title": "Window painting",
+    "service1Description": "Professional painting with environmentally friendly paint.",
+    "service2Title": "Window renovation",
+    "service2Description": "Qualified services such as scraping, sanding, and puttying.",
+    "service3Title": "Glass replacement",
+    "service3Description": "We replace all types of glass, including energy glass that reduces energy costs.",
+    "service4Title": "Repairing rot damage",
+    "service4Description": "Replacing parts or entire window frames in case of damage.",
     "CTA": "Book a free consultation"
   },
+  "ourService": {
+    "title": "Our Service.",
+    "leftSection": {
+      "title": "Save money with ROT deductions",
+      "description": "Repairs and maintenance count as ROT work, and you can get back up to 50% of the labor cost, with a maximum amount of SEK 50,000 per person per year."
+    },
+    "rightSection": {
+      "title": "Free window cleaning",
+      "description": "After we have renovated your windows, we offer a free window cleaning service so that you can fully enjoy your windows."
+    },
+    "CTA": "Get in touch"
+  },
   "aboutUs": {
-    "title": "About Us",
     "slogan": "Best Windows in Stockholm",
     "images": [
       {
@@ -162,12 +185,24 @@
         "src": "/assets/about/3.jpg",
         "width": 800,
         "height": 600
+      },
+      {
+        "src": "/assets/about/3.jpg",
+        "width": 800,
+        "height": 600
       }
     ],
     "descriptions": [
-      "Prietos Company is a company created from an idea of improvement in pursuit of creating something superior based on the professional talent acquired over several years, then that idea was reinforced with discipline and effort.",
-      "It was started by one person and today we have the support of several very competent workers in the renovation market. It is a company that is very supportive in the fight to preserve the ecosystem through renewable production with products authorized by the work environment",
-      "For us, the satisfaction of our customers and their perception of our work after completion of the work is very important. We believe that the customer has the highest priority in deciding on their product, along with our experience in the market."
+      "Prietos Company began as a vision - to create something superior through years of experience, reinforced with discipline and hard work.",
+      "What started as a one-man business became a team of skilled professionals who all share the same commitment to high-quality.",
+      "We believe that your wallet and our shared environment must be treated the same way - sustainably",
+      "You tell us what you need, and we'll take care of everything else - We guarantee the best quality!"
+    ],
+    "titles": [
+      "From a vision to a company",
+      "From one person to a competent team",
+      "Sustainability at heart",
+      "Customer first, always"
     ]
   },
   "contactForm": {

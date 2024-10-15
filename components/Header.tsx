@@ -2,34 +2,28 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Menu } from 'lucide-react'
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
 import LanguageSwitcher from './LanguageSwitcher'
 import { getTranslations } from '@/lib/utils'
 import { ThemeToggle } from './ThemeToggle'
-import { usePathname } from 'next/navigation'
 
 export default function Header({ lang }: { lang: string }) {
     const t = getTranslations(lang);
     const [isOpen, setIsOpen] = useState(false)
-    const [isTransparent, setIsTransparent] = useState(false)
-    const pathname = usePathname()
 
-    useEffect(() => {
-        setIsTransparent(pathname.includes('/home'))
-    }, [pathname])
 
     const navItems = [t.header.home, t.header.about, t.header.projects, t.header.contact]
     const navLinks = ["/home", "/about", "/projects", "/contact"]
 
     return (
-        <header className={`${isTransparent ? 'bg-transparent' : 'bg-black'} text-white shadow-md transition-colors duration-300`}>
+        <header className="bg-black text-[#EAEAEA] shadow-md">
             <div className="container mx-auto px-4 py-4 flex justify-between items-center">
                 <Sheet open={isOpen} onOpenChange={setIsOpen}>
                     <SheetTrigger asChild>
-                        <Button variant="ghost" size="icon" className="md:hidden order-first text-foreground hover:text-primary">
+                        <Button variant="ghost" size="icon" className="md:hidden order-first text-[#EAEAEA] hover:text-primary">
                             <Menu size={24} />
                             <span className="sr-only">Toggle menu</span>
                         </Button>
@@ -59,7 +53,7 @@ export default function Header({ lang }: { lang: string }) {
                     </SheetContent>
                 </Sheet>
 
-                <Link href={`/${lang}`} className="flex items-center order-last md:order-first">
+                <Link href={`/${lang}/home`} className="flex items-center order-last md:order-first">
                     <Image
                         src={t.header.logoSrc}
                         alt="Prietos Kompaniet Logo"
