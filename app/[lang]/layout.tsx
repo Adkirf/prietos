@@ -16,15 +16,14 @@ export default function LangLayout({
     return (
         <>
             <ThemeProvider>
-                <div className="flex flex-col h-screen w-screen overflow-auto">
-                    <div className="sticky top-0 left-0 w-full z-50">
-                        <Header lang={params.lang} />
-                    </div>
-                    <div className="flex flex-col flex-grow">
-                        <main className="flex-grow w-full bg-background">{children}</main>
-                        <Footer lang={params.lang} />
-                    </div>
+                <div className="fixed top-0 left-0 w-full h-[12vh] z-50">
+                    <Header lang={params.lang} />
                 </div>
+                <div className="flex flex-col h-[88vh]">
+                    <main className="flex-grow w-full bg-background">{children}</main>
+                    <Footer lang={params.lang} />
+                </div>
+
             </ThemeProvider>
         </>
     );

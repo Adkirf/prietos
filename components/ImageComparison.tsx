@@ -11,6 +11,7 @@ export function ImageComparisonComponent({ params: { lang } }: { params: { lang:
   const [sliderPosition, setSliderPosition] = useState(50)
   const containerRef = useRef<HTMLDivElement>(null)
   const isDraggingRef = useRef(false)
+  const isHoverDevice = useRef(false)
 
   const t = getTranslations(lang);
 
@@ -29,7 +30,7 @@ export function ImageComparisonComponent({ params: { lang } }: { params: { lang:
 
   const handleMouseMove = useCallback(
     (event: MouseEvent) => {
-      if (isDraggingRef.current) {
+      if (isDraggingRef.current || isHoverDevice.current) {
         handleMove(event.clientX)
       }
     },
@@ -56,6 +57,14 @@ export function ImageComparisonComponent({ params: { lang } }: { params: { lang:
   useEffect(() => {
     const container = containerRef.current
     if (container) {
+      const handleMouseEnter = () => {
+        isHoverDevice.current = true
+      }
+
+      const handleMouseLeave = () => {
+        isHoverDevice.current = false
+      }
+
       container.addEventListener('mousedown', handleStartDragging)
       container.addEventListener('mousemove', handleMouseMove)
       container.addEventListener('mouseup', handleStopDragging)
@@ -63,6 +72,8 @@ export function ImageComparisonComponent({ params: { lang } }: { params: { lang:
       container.addEventListener('touchstart', handleStartDragging)
       container.addEventListener('touchmove', handleTouchMove)
       container.addEventListener('touchend', handleStopDragging)
+      container.addEventListener('mouseenter', handleMouseEnter)
+      container.addEventListener('mouseleave', handleMouseLeave)
 
       return () => {
         container.removeEventListener('mousedown', handleStartDragging)
@@ -72,6 +83,8 @@ export function ImageComparisonComponent({ params: { lang } }: { params: { lang:
         container.removeEventListener('touchstart', handleStartDragging)
         container.removeEventListener('touchmove', handleTouchMove)
         container.removeEventListener('touchend', handleStopDragging)
+        container.removeEventListener('mouseenter', handleMouseEnter)
+        container.removeEventListener('mouseleave', handleMouseLeave)
       }
     }
   }, [handleMouseMove, handleTouchMove, handleStartDragging, handleStopDragging])

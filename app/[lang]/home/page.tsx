@@ -8,10 +8,8 @@ import WeCover from '@/components/WeCover';
 // This component renders the content for the home page in the specified language
 export default function Home({ params: { lang } }: { params: { lang: string } }) {
 
-
-
     return (
-        <div className="w-full h-full flex flex-col gap-10">
+        <div className="w-full h-full flex flex-col gap-10 overflow-auto">
             <Hero params={{ lang }} />
             <ImageComparisonComponent params={{ lang }} />
             <InformationBoxes params={{ lang }} />

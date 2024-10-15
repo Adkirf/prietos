@@ -11,7 +11,7 @@ export default function ContactForm({ params: { lang } }: { params: { lang: stri
   const t = getTranslations(lang);
 
   return (
-    <div className="max-w-2xl mx-auto p-6 bg-card rounded-lg shadow-md">
+    <div className="max-w-2xl mx-auto lg:pt-4 p-6 bg-card rounded-lg shadow-md">
       <h2 className="text-2xl font-bold mb-6 text-center text-foreground">{t.contactForm.title}</h2>
       <div className="mb-8 text-center">
         <div className="space-y-2">

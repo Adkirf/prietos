@@ -6,7 +6,7 @@ export default function Contact({ params: { lang } }: { params: { lang: string }
     // Get translations for the specified language
 
     return (
-        <div className="container mx-auto py-12 px-2">
+        <div className="container mx-auto pt-[15vh] pb-6 px-4">
             <ContactForm params={{ lang }} />
         </div>
     );

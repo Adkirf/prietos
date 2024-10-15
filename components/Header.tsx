@@ -19,8 +19,8 @@ export default function Header({ lang }: { lang: string }) {
     const navLinks = ["/home", "/about", "/projects", "/contact"]
 
     return (
-        <header className="bg-black text-[#EAEAEA] shadow-md">
-            <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+        <header className="bg-black flex h-full justify-center text-[#EAEAEA] shadow-md">
+            <div className="container  mx-auto px-4 flex justify-between items-center">
                 <Sheet open={isOpen} onOpenChange={setIsOpen}>
                     <SheetTrigger asChild>
                         <Button variant="ghost" size="icon" className="md:hidden order-first text-[#EAEAEA] hover:text-primary">
