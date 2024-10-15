@@ -10,15 +10,16 @@ import { Card, CardContent, CardFooter } from '@/components/ui/card'
 export function ImageComparisonComponent({ params: { lang } }: { params: { lang: string } }) {
   const [sliderPosition, setSliderPosition] = useState(50)
   const containerRef = useRef<HTMLDivElement>(null)
+  const isDraggingRef = useRef(false)
 
   const t = getTranslations(lang);
 
-  const handleMouseMove = useCallback(
-    (event: MouseEvent) => {
+  const handleMove = useCallback(
+    (clientX: number) => {
       if (containerRef.current) {
         const containerRect = containerRef.current.getBoundingClientRect()
         const containerWidth = containerRect.width
-        const mouseX = event.clientX - containerRect.left
+        const mouseX = clientX - containerRect.left
         const newPosition = (mouseX / containerWidth) * 100
         setSliderPosition(Math.max(0, Math.min(100, newPosition)))
       }
@@ -26,15 +27,54 @@ export function ImageComparisonComponent({ params: { lang } }: { params: { lang:
     []
   )
 
+  const handleMouseMove = useCallback(
+    (event: MouseEvent) => {
+      if (isDraggingRef.current) {
+        handleMove(event.clientX)
+      }
+    },
+    [handleMove]
+  )
+
+  const handleTouchMove = useCallback(
+    (event: TouchEvent) => {
+      if (isDraggingRef.current) {
+        handleMove(event.touches[0].clientX)
+      }
+    },
+    [handleMove]
+  )
+
+  const handleStartDragging = useCallback(() => {
+    isDraggingRef.current = true
+  }, [])
+
+  const handleStopDragging = useCallback(() => {
+    isDraggingRef.current = false
+  }, [])
+
   useEffect(() => {
     const container = containerRef.current
     if (container) {
+      container.addEventListener('mousedown', handleStartDragging)
       container.addEventListener('mousemove', handleMouseMove)
+      container.addEventListener('mouseup', handleStopDragging)
+      container.addEventListener('mouseleave', handleStopDragging)
+      container.addEventListener('touchstart', handleStartDragging)
+      container.addEventListener('touchmove', handleTouchMove)
+      container.addEventListener('touchend', handleStopDragging)
+
       return () => {
+        container.removeEventListener('mousedown', handleStartDragging)
         container.removeEventListener('mousemove', handleMouseMove)
+        container.removeEventListener('mouseup', handleStopDragging)
+        container.removeEventListener('mouseleave', handleStopDragging)
+        container.removeEventListener('touchstart', handleStartDragging)
+        container.removeEventListener('touchmove', handleTouchMove)
+        container.removeEventListener('touchend', handleStopDragging)
       }
     }
-  }, [handleMouseMove])
+  }, [handleMouseMove, handleTouchMove, handleStartDragging, handleStopDragging])
 
   return (
     <div className="w-full px-4 h-screen flex flex-col items-center justify-center gap-4 bg-background">

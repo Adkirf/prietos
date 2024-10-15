@@ -111,14 +111,16 @@
     "copyright": "© 2024 Window Renovation and Painting Services. All rights reserved.",
     "followUs": "Follow Us",
     "facebook": "Facebook",
-    "instagram": "Instagram",
+    "instagram": "Insagram",
     "legal": "Legal",
     "termsAndConditions": "Terms and Conditions",
     "privacyPolicy": "Privacy Policy",
-    "allRightsReserved": "All rights reserved."
+    "allRightsReserved": "All rights reserved.",
+    "logoSrc": "/assets/Prietoslogo.jpg"
   },
   "hero": {
     "title": "Prietos Kompaniet",
+    "videoSrc": "/assets/videohomprieto.mp4",
     "subtitle": "We guarantee the quality of your windows",
     "point1": "Authorized professionals",
     "point2": "Window painting and renovation",

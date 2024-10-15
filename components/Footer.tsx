@@ -17,7 +17,7 @@ export default function Footer({ lang }: { lang: string }) {
                     {/* Logo Section */}
                     <div className="flex flex-col items-center md:items-start">
                         <Image
-                            src="/assets/Prietoslogo.png"
+                            src={t.footer.logoSrc}
                             alt="Prietos Logo"
                             width={140}
                             height={70}

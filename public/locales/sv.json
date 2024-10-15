@@ -108,7 +108,6 @@
     "email": "info@prietos.se",
     "openingHours": "Mån-Fre: 08:00-17:00",
     "address": "Storgatan 1, 111 23 Stockholm",
-
     "copyright": "© 2024 Fönsterrenovering och målningstjänster. Alla rättigheter förbehållna.",
     "followUs": "Följ oss",
     "facebook": "Facebook",
@@ -116,10 +115,12 @@
     "legal": "Juridiskt",
     "termsAndConditions": "Villkor",
     "privacyPolicy": "Integritetspolicy",
-    "allRightsReserved": "Alla rättigheter förbehållna."
+    "allRightsReserved": "Alla rättigheter förbehållna.",
+    "logoSrc": "/assets/Prietoslogo.jpg"
   },
   "hero": {
     "title": "Prietos Kompaniet",
+    "videoSrc": "/assets/videohomprieto.mp4",
     "subtitle": "Vi garanterar kvaliteten på dina fönster",
     "point1": "Auktoriserade yrkesutövare",
     "point2": "Målning och renovering av fönster",

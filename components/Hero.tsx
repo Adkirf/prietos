@@ -13,10 +13,11 @@ export function Hero({ params: { lang } }: { params: { lang: string } }) {
         autoPlay
         loop
         muted
+        playsInline
         className="absolute inset-0 w-full h-full object-cover"
+        style={{ pointerEvents: 'none' }}
       >
-        <source src="/assets/videohomprieto.mp4" type="video/mp4" />
-        ˇ
+        <source src={t.hero.videoSrc} type="video/mp4" />
       </video>
 
       {/* Overlay */}
