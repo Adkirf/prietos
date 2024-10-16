@@ -10,7 +10,7 @@ export default function CTAButton({ lang }: { lang: string }) {
             <Button
                 className="
                     h-12
-                    bg-primary text-primary-foreground 
+                    border border-primary bg-transparent text-primary-foreground 
                     px-8 py-4 rounded-full text-xl font-bold 
                     hover:bg-secondary hover:scale-105 
                     transition-all duration-300 

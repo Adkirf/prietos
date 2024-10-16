@@ -8,7 +8,7 @@ export default function WeCover({ params: { lang } }: { params: { lang: string }
     return (
         <section className="w-full flex justify-center items-center min-h-screen py-12 md:py-24 lg:py-32 bg-background">
             <div className="container px-4 md:px-6 relative">
-                <div className="flex relative flex-col lg:flex-row gap-6 lg:gap-12">
+                <div className="flex relative flex-col md:flex-row gap-6 lg:gap-12">
                     <div className="lg:w-auto">
                         <div className="md:aspect-video md:h-full w-full lg:w-[300px] overflow-hidden rounded-xl ">
                             <div className="inset-0 flex h-[75px] md:h-full items-center justify-center">
