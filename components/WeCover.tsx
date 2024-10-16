@@ -6,7 +6,7 @@ export default function WeCover({ params: { lang } }: { params: { lang: string }
     const t = getTranslations(lang);
 
     return (
-        <section className="w-full min-h-screen py-12 md:py-24 lg:py-32 bg-background">
+        <section className="w-full flex justify-center items-center min-h-screen py-12 md:py-24 lg:py-32 bg-background">
             <div className="container px-4 md:px-6 relative">
                 <div className="flex relative flex-col lg:flex-row gap-6 lg:gap-12">
                     <div className="lg:w-auto">
