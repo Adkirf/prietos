@@ -2,26 +2,87 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    /* Light Theme */
+    --background: 0 0% 100%; /* #FFFFFF - Pure white for a clean and open feel */
+    --foreground: 0 0% 13%; /* #222222 - Dark gray for readability, less stark than pure black */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 13%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 13%;
+    --primary: 120 86% 35%; /* #35A30D - Green accent for buttons, links, and highlights */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 120 89% 37%; /* #28B40A - Slightly darker green for hover effects or secondary accents */
+    --secondary-foreground: 0 0% 13%;
+    --muted: 0 0% 87%; /* #DDDDDD - Light gray for section dividers and borders */
+    --muted-foreground: 0 0% 33%; /* #555555 - Medium gray for secondary content */
+    --accent: 120 86% 35%; /* #35A30D - Same as primary, for consistency */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 87%; /* #DDDDDD - Light gray for section dividers and borders */
+    --input: 0 0% 87%;
+    --ring: 120 86% 35%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    /* Dark Theme */
+    --background: 0 0% 8%; /* #1B1B1B - Very dark gray, almost black for a sleek backdrop */
+    --foreground: 0 0% 92%; /* #EAEAEA - Soft white for high readability without harsh contrast */
+    --card: 0 0% 11%;
+    --card-foreground: 0 0% 92%;
+    --popover: 0 0% 11%;
+    --popover-foreground: 0 0% 92%;
+    --primary: 120 86% 35%; /* #35A30D - Green accent for buttons, links, and highlights */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 120 73% 45%; /* #4CC71F - A lighter green for hover effects or subtle highlights */
+    --secondary-foreground: 0 0% 92%;
+    --muted: 0 0% 20%; /* #333333 - Darker gray for subtle borders and section dividers */
+    --muted-foreground: 0 0% 72%; /* #B8B8B8 - Light gray for less prominent text */
+    --accent: 120 86% 35%; /* #35A30D - Same as primary, for consistency */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 92%;
+    --border: 0 0% 20%; /* #333333 - Darker gray for subtle borders and section dividers */
+    --input: 0 0% 20%;
+    --ring: 0 0% 72%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+h1{
+  @apply text-xl text-foreground md:text-2xl lg:text-3xl font-bold mb-8 md:mb-12 lg:mb-16 max-w-3xl;
+}
+
+section{
+  @apply w-full min-h-[88vh] items-center justify-center ;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }

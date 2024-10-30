@@ -1,0 +1,227 @@
+{
+  "home": {
+    "title": "Bienvenido a Nuestros Servicios de Ventanas",
+    "description": "Nos especializamos en renovación y pintura de ventanas en Estocolmo."
+  },
+  "about": {
+    "title": "Sobre Nosotros",
+    "description": "Somos un equipo dedicado de profesionales especializados en servicios de renovación y pintura de ventanas en Estocolmo."
+  },
+  "projects": {
+    "title": "Nuestros Proyectos",
+    "list": [
+      {
+        "title": "Renovación de Ventanas para Edificio Histórico",
+        "images": [
+          {
+            "src": "/assets/project1/1.jpg",
+            "width": 800,
+            "height": 600
+          },
+          {
+            "src": "/assets/project1/2.jpg",
+            "width": 800,
+            "height": 600
+          },
+          {
+            "src": "/assets/project1/3.jpg",
+            "width": 800,
+            "height": 600
+          },
+          {
+            "src": "/assets/project1/4.jpg",
+            "width": 800,
+            "height": 600
+          },
+          {
+            "src": "/assets/project1/5.jpg",
+            "width": 800,
+            "height": 600
+          }
+        ]
+      },
+      {
+        "title": "Pintura Exterior para Complejo de Apartamentos Moderno",
+        "images": [
+          {
+            "src": "/assets/project2/1.jpg",
+            "width": 800,
+            "height": 600
+          },
+          {
+            "src": "/assets/project2/2.jpg",
+            "width": 800,
+            "height": 600
+          },
+          {
+            "src": "/assets/project2/3.jpg",
+            "width": 800,
+            "height": 600
+          },
+          {
+            "src": "/assets/project2/4.jpg",
+            "width": 800,
+            "height": 600
+          }
+        ]
+      },
+      {
+        "title": "Instalación de Ventanas Personalizadas para Casa Ecológica",
+        "images": [
+          {
+            "src": "/assets/project3/1.jpg",
+            "width": 800,
+            "height": 600
+          },
+          {
+            "src": "/assets/project3/2.jpg",
+            "width": 800,
+            "height": 600
+          },
+          {
+            "src": "/assets/project3/3.jpg",
+            "width": 800,
+            "height": 600
+          }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "name": "Nombre",
+    "email": "Correo Electrónico",
+    "message": "Mensaje",
+    "send": "Enviar"
+  },
+  "header": {
+    "home": "Inicio",
+    "about": "Sobre Nosotros",
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "logoSrc": "/assets/prietosLogo.jpg"
+  },
+  "footer": {
+    "title": "Los mejores servicios de renovación y pintura de ventanas en Estocolmo",
+    "contact": "Contáctanos",
+    "phone": "+46 123 456 789",
+    "email": "info@prietos.se",
+    "openingHours": "Lun-Vie: 8:00-17:00",
+    "address": "Storgatan 1, 111 23 Estocolmo",
+    "copyright": "© 2024 Servicios de Renovación y Pintura de Ventanas. Todos los derechos reservados.",
+    "followUs": "Síguenos",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "legal": "Legal",
+    "termsAndConditions": "Términos y Condiciones",
+    "privacyPolicy": "Política de Privacidad",
+    "allRightsReserved": "Todos los derechos reservados.",
+    "logoSrc": "/assets/prietosLogo.jpg"
+  },
+  "hero": {
+    "title": "Prietos Kompaniet",
+    "videoSrc": "/assets/videohomprieto.mp4",
+    "subtitle": "Garantizamos la calidad de tus ventanas",
+    "point1": "Profesionales autorizados",
+    "point2": "Pintura y renovación de ventanas",
+    "point3": "Soluciones ecológicas",
+    "point4": "Hasta 50.000 SEK en Beneficios Fiscales",
+    "videoError": "Tu navegador no soporta la etiqueta de video."
+  },
+  "imageComparison": {
+    "title": "Para nosotros, tu satisfacción es primordial.",
+    "description": "¡Nos esforzamos por combinar artesanía de alta calidad con soluciones sostenibles para preservar el ecosistema Y tu billetera!",
+    "before": {
+      "src": "/assets/before.jpg",
+      "alt": "Antes"
+    },
+    "after": {
+      "src": "/assets/after.jpg",
+      "alt": "Después"
+    }
+  },
+  "informative": {
+    "title": "¿Por qué renovar en lugar de comprar nuevo?",
+    "text1": "Renovar ventanas en lugar de comprar nuevas es generalmente mejor tanto para el medio ambiente como para tu billetera.",
+    "text2": "Las ventanas antiguas de madera están hechas de madera de alta calidad y pueden durar muchos años después de una renovación profesional.",
+    "text3": "Nuestro vidrio energético recomendado está diseñado para reflejar la radiación de calor de onda larga, lo que mantiene hasta un 50% más de calor en el interior."
+  },
+  "weCover": {
+    "title": "¡Te cubrimos!",
+    "service1Title": "Pintura de ventanas",
+    "service1Description": "Pintura profesional con pinturas ecológicas.",
+    "service2Title": "Renovación de ventanas",
+    "service2Description": "Servicios calificados como raspado, lijado y masillado.",
+    "service3Title": "Reemplazo de vidrios",
+    "service3Description": "Reemplazamos todo tipo de vidrios, incluyendo vidrio energético que reduce los costos de energía.",
+    "service4Title": "Reparación de daños por pudrición",
+    "service4Description": "Reemplazo de partes o marcos completos de ventanas en caso de daño.",
+    "CTA": "Reserva una consulta gratuita"
+  },
+  "ourService": {
+    "title": "Nuestro Servicio.",
+    "leftSection": {
+      "title": "Ahorra dinero con deducciones ROT",
+      "description": "Las reparaciones y el mantenimiento cuentan como trabajo ROT, y puedes recuperar hasta el 50% del costo de mano de obra, con un monto máximo de 50.000 SEK por persona por año."
+    },
+    "rightSection": {
+      "title": "Limpieza de ventanas gratis",
+      "description": "Después de renovar tus ventanas, ofrecemos un servicio gratuito de limpieza para que puedas disfrutar plenamente de tus ventanas."
+    },
+    "CTA": "Contáctanos"
+  },
+  "aboutUs": {
+    "slogan": "Las Mejores Ventanas en Estocolmo",
+    "images": [
+      {
+        "src": "/assets/about/1.jpg",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/about/2.jpg",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/about/3.jpg",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/about/3.jpg",
+        "width": 800,
+        "height": 600
+      }
+    ],
+    "descriptions": [
+      "Prietos Company comenzó como una visión - crear algo superior a través de años de experiencia, reforzado con disciplina y trabajo duro.",
+      "Lo que comenzó como un negocio unipersonal se convirtió en un equipo de profesionales calificados que comparten el mismo compromiso con la alta calidad.",
+      "Creemos que tu billetera y nuestro medio ambiente compartido deben tratarse de la misma manera - de forma sostenible",
+      "Tú nos dices lo que necesitas, y nosotros nos encargamos de todo lo demás - ¡Garantizamos la mejor calidad!"
+    ],
+    "titles": [
+      "De una visión a una empresa",
+      "De una persona a un equipo competente",
+      "Sostenibilidad en el corazón",
+      "El cliente primero, siempre"
+    ]
+  },
+  "contactForm": {
+    "title": "Contáctanos",
+    "or": "o",
+    "label": {
+      "name": "Nombre",
+      "email": "Correo Electrónico",
+      "message": "Mensaje",
+      "send": "Enviar",
+      "phone": "Número de Teléfono"
+    },
+    "placeholder": {
+      "name": "Tu Nombre",
+      "email": "Tu Correo Electrónico",
+      "message": "Tu Mensaje",
+      "phone": "Tu Número de Teléfono"
+    }
+  }
+}
