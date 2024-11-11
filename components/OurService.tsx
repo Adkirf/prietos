@@ -2,8 +2,9 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
+import { Dictionary } from '@/app/[lang]/dictionaries'
 
-export function OurSerivce({ dict }: { dict: any }) {
+export function OurSerivce({ dict }: { dict: Dictionary }) {
 
   return (
     <section className="bg-background text-foreground py-8 flex flex-col px-8 md:px-12 lg:px-16">

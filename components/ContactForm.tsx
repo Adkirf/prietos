@@ -5,8 +5,9 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Separator } from "@/components/ui/separator"
 import { Mail, Phone } from "lucide-react"
+import { Dictionary } from '@/app/[lang]/dictionaries'
 
-export default function ContactForm({ dict }: { dict: any }) {
+export default function ContactForm({ dict }: { dict: Dictionary }) {
 
   return (
     <div className="max-w-2xl mx-auto lg:pt-4 p-6 bg-card rounded-lg shadow-md">

@@ -2,10 +2,11 @@
 
 import Image from 'next/image'
 import { useEffect, useState, useRef, useCallback } from 'react'
+import { Dictionary } from '@/app/[lang]/dictionaries'
 
 import { about1, about2, about3, about4 } from '@/lib/assets'
 
-export function AboutUs({ dict }: { dict: any }) {
+export function AboutUs({ dict }: { dict: Dictionary }) {
     const [currentIndex, setCurrentIndex] = useState(0)
     const [isAnimating, setIsAnimating] = useState(false)
     const [isImageAnimating, setIsImageAnimating] = useState(false)

@@ -2,8 +2,9 @@
 
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from "lucide-react";
+import { Dictionary } from '@/app/[lang]/dictionaries'
 
-export function CTAButton({ dict, lang }: { dict: any, lang: string }) {
+export function CTAButton({ dict, lang }: { dict: Dictionary, lang: string }) {
 
     return (
         <div className="flex justify-center h-[12vh] items-center">

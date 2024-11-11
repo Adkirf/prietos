@@ -6,8 +6,9 @@ import { Facebook, Instagram, Clock, Phone, Mail, MapPin } from 'lucide-react'
 import { useFont } from './context/FontProvider';
 
 import { prietosLogo } from '@/lib/assets';
+import { Dictionary } from '@/app/[lang]/dictionaries'
 
-export default function Footer({ dict }: { dict: any }) {
+export default function Footer({ dict }: { dict: Dictionary }) {
 
     const { font } = useFont();
 

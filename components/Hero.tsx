@@ -2,8 +2,9 @@
 
 import { CheckCircle } from 'lucide-react'
 import videoSrc from '@/public/assets/videohomprieto.mp4'
+import { Dictionary } from '@/app/[lang]/dictionaries'
 
-export function Hero({ dict }: { dict: any }) {
+export function Hero({ dict }: { dict: Dictionary }) {
 
   return (
     <section className="relative">

@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import type { StaticImageData } from 'next/image'
+import type { Dictionary } from '@/app/[lang]/dictionaries';
 import {
   project1_1,
   project1_2,
@@ -53,14 +54,14 @@ const PROJECT_IMAGES: Record<number, ProjectImage[]> = {
   ],
 }
 
-export function ImageGallery({ dict }: { dict: any }) {
+export function ImageGallery({ dict }: { dict: Dictionary }) {
   const [projects, setProjects] = useState<Project[]>([])
   const [activeProject, setActiveProject] = useState(0)
   const projectRefs = useRef<(HTMLDivElement | null)[]>([])
 
   useEffect(() => {
     // Create projects array using assets and translations
-    const loadedProjects = dict.projects.list.map((project: any, index: number) => ({
+    const loadedProjects = dict.projects.list.map((project, index: number) => ({
       title: project.title,
       images: PROJECT_IMAGES[index + 1] || []
     }))
@@ -156,7 +157,9 @@ const ProjectSection = ({ project, isActive, projectIndex, lang }: {
     <section className="mb-16 relative">
       <div className='sticky top-10 z-20 bg-background text-foreground flex items-end justify-bottom h-[17vh]'>
         <h2
-          className={`text-2xl font-bold m transition-all duration-300 ${isActive ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          className={`text-2xl font-bold m transition-all duration-300 ${isActive
+            ? 'opacity-100 translate-y-0'
+            : 'sm:opacity-0 opacity-100 sm:translate-y-4 translate-y-0'
             }`}
         >
           {project.title}

@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/context/ThemeProvider";
 import { FontProvider } from "@/components/context/FontProvider";
 import React from "react";
-import { getDictionary } from "./dictionaries";
+import { getDictionary, Dictionary } from "./dictionaries";
 import { FontToggle } from "@/components/context/FontToggle";
 
 
@@ -17,7 +17,7 @@ export default async function LangLayout({
     children: React.ReactNode;
     params: { lang: string };
 }) {
-    const dict: any = await getDictionary(params.lang)
+    const dict: Dictionary = await getDictionary(params.lang)
 
 
     return (

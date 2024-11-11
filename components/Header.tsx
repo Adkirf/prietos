@@ -12,8 +12,9 @@ import { useFont } from './context/FontProvider'
 
 //Assets
 import { prietosLogo } from '@/lib/assets'
+import { Dictionary } from '@/app/[lang]/dictionaries'
 
-export default function Header({ dict, lang }: { dict: any, lang: string }) {
+export default function Header({ dict, lang }: { dict: Dictionary, lang: string }) {
     const [isOpen, setIsOpen] = useState(false)
 
     const { font } = useFont();

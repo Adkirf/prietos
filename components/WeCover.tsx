@@ -1,6 +1,7 @@
 import { HousePlus, PaintbrushVertical, SquareArrowOutDownLeft, Hammer } from 'lucide-react'
+import { Dictionary } from '@/app/[lang]/dictionaries'
 
-export function WeCover({ dict }: { dict: any }) {
+export function WeCover({ dict }: { dict: Dictionary }) {
 
     return (
         <section className="overflow-auto py-12 md:py-24 lg:py-32 bg-background">

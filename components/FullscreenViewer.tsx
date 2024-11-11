@@ -5,18 +5,34 @@ import { X, ZoomIn, ZoomOut, Share, ChevronLeft, ChevronRight } from 'lucide-rea
 import { useDrag } from '@use-gesture/react'
 import { useSpring, animated } from 'react-spring'
 import { useWindowSize } from 'react-use'
+import { useRouter } from 'next/navigation'
+import type { StaticImageData } from 'next/image'
+
+
+type ProjectImage = {
+  src: StaticImageData
+  width: number
+  height: number
+}
 
 interface FullscreenViewerProps {
-  images: string[]
+
   initialIndex: number
-  onClose: () => void
+  lang: string
+  projectId: number
+  project: {
+    title: string;
+    images: ProjectImage[];
+  }
 }
 
 export function FullscreenViewer({
-  images,
   initialIndex,
-  onClose,
+  lang,
+  projectId,
+  project
 }: FullscreenViewerProps) {
+  const router = useRouter();
   const [currentIndex, setCurrentIndex] = useState(initialIndex)
   const [zoomLevel, setZoomLevel] = useState(1)
   const [isFullscreen, setIsFullscreen] = useState(false)
@@ -26,20 +42,24 @@ export function FullscreenViewer({
   // Use react-spring for smooth animations
   const [{ x, y }, api] = useSpring(() => ({ x: 0, y: 0 }))
 
+  const handleClose = useCallback(() => {
+    router.push(`/${lang}/projects`);
+  }, [router, lang]);
+
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
-        onClose()
+        handleClose()
       } else if (event.key === 'ArrowLeft') {
-        setCurrentIndex((prev) => (prev > 0 ? prev - 1 : images.length - 1))
+        setCurrentIndex((prev) => (prev > 0 ? prev - 1 : project.images.length - 1))
       } else if (event.key === 'ArrowRight') {
-        setCurrentIndex((prev) => (prev < images.length - 1 ? prev + 1 : 0))
+        setCurrentIndex((prev) => (prev < project.images.length - 1 ? prev + 1 : 0))
       }
     }
 
     document.addEventListener('keydown', handleKeyDown)
     return () => document.removeEventListener('keydown', handleKeyDown)
-  }, [onClose, images.length])
+  }, [handleClose, project.images.length])
 
   useEffect(() => {
     const element = document.documentElement
@@ -62,27 +82,31 @@ export function FullscreenViewer({
   }
 
   const handleShare = useCallback(async () => {
+    // Construct the shareable URL using the current window location and image index
+    const baseUrl = window.location.origin
+    const shareUrl = `${baseUrl}/${lang}/projects/${projectId}/${currentIndex}`
+
     if (navigator.share) {
       try {
         await navigator.share({
-          title: 'Check out this image',
-          url: images[currentIndex],
+          title: project.title,
+          url: shareUrl
         })
       } catch (error) {
         console.error('Error sharing:', error)
       }
     } else {
-      await navigator.clipboard.writeText(images[currentIndex])
-      alert('Image URL copied to clipboard!')
+      await navigator.clipboard.writeText(shareUrl)
+      alert('Link copied to clipboard!')
     }
-  }, [images, currentIndex])
+  }, [currentIndex, lang, project.title, projectId])
 
   const handlePrevImage = () => {
-    setCurrentIndex((prev) => (prev > 0 ? prev - 1 : images.length - 1))
+    setCurrentIndex((prev) => (prev > 0 ? prev - 1 : project.images.length - 1))
   }
 
   const handleNextImage = () => {
-    setCurrentIndex((prev) => (prev < images.length - 1 ? prev + 1 : 0))
+    setCurrentIndex((prev) => (prev < project.images.length - 1 ? prev + 1 : 0))
   }
 
   const bind = useDrag(({ offset: [ox, oy], last }) => {
@@ -115,9 +139,11 @@ export function FullscreenViewer({
   const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
     // Check if the click target is the overlay itself
     if (e.target === e.currentTarget) {
-      onClose()
+      handleClose()
     }
   }
+
+
 
   return (
     <div
@@ -126,7 +152,7 @@ export function FullscreenViewer({
     >
       <div className="absolute z-50 top-4 left-4 right-4 flex justify-between items-center text-[#EAEAEA]">
         <span className="text-sm">
-          Image {currentIndex + 1} of {images.length}
+          Image {currentIndex + 1} of {project.images.length}
         </span>
         <div className="flex items-center space-x-4">
           <button onClick={handleZoomOut} className="p-2 hover:bg-muted rounded-full transition-colors">
@@ -154,7 +180,7 @@ export function FullscreenViewer({
             )}
             <span className="sr-only">{isFullscreen ? 'Exit Fullscreen' : 'Enter Fullscreen'}</span>
           </button>
-          <button onClick={onClose} className="p-2 hover:bg-muted rounded-full transition-colors">
+          <button onClick={handleClose} className="p-2 hover:bg-muted rounded-full transition-colors">
             <X className="w-6 h-6" />
             <span className="sr-only">Close</span>
           </button>
@@ -175,7 +201,7 @@ export function FullscreenViewer({
         >
           <animated.img
             ref={imageRef}
-            src={images[currentIndex]}
+            src={project.images[currentIndex].src.src}
             alt={`Image ${currentIndex + 1}`}
             className="max-h-full max-w-full object-contain transition-duration-300 ease-in-out"
             style={{

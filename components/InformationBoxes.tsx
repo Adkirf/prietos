@@ -1,8 +1,9 @@
 'use client'
 
 import { Card, CardContent } from "@/components/ui/card";
+import { Dictionary } from '@/app/[lang]/dictionaries'
 
-export function InformationBoxes({ dict }: { dict: any }) {
+export function InformationBoxes({ dict }: { dict: Dictionary }) {
 
   return (
     <section className="bg-background text-foreground flex flex-col px-8 md:px-12 lg:px-16">

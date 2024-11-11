@@ -1,7 +1,7 @@
 'use client'
 
 import { Open_Sans, Montserrat, Playfair_Display, Lato, Roboto } from 'next/font/google';
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
 const roboto = Roboto({
     weight: ['400', '700'],

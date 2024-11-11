@@ -7,8 +7,9 @@ import { cn } from '@/lib/utils'
 import { Card, CardContent, CardFooter } from '@/components/ui/card'
 
 import { before, after } from '@/lib/assets'
+import { Dictionary } from '@/app/[lang]/dictionaries'
 
-export function ImageComparison({ dict }: { dict: any }) {
+export function ImageComparison({ dict }: { dict: Dictionary }) {
   const [sliderPosition, setSliderPosition] = useState(50)
   const containerRef = useRef<HTMLDivElement>(null)
   const isDraggingRef = useRef(false)
