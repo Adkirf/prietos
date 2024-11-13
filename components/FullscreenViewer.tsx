@@ -169,7 +169,7 @@ export function FullscreenViewer({
           </button>
           <button
             onClick={() => setIsFullscreen((prev) => !prev)}
-            className="p-2 hover:bg-muted rounded-full transition-colors"
+            className="p-2 hover:bg-muted rounded-full transition-colors hidden md:block"
           >
             {isFullscreen ? (
               <X className="w-6 h-6" />
