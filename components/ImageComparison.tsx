@@ -38,15 +38,6 @@ export function ImageComparison({ dict }: { dict: Dictionary }) {
     [handleMove]
   )
 
-  const handleTouchMove = useCallback(
-    (event: TouchEvent) => {
-      if (isDraggingRef.current) {
-        handleMove(event.touches[0].clientX)
-      }
-    },
-    [handleMove]
-  )
-
   const handleStartDragging = useCallback(() => {
     isDraggingRef.current = true
   }, [])
@@ -54,6 +45,22 @@ export function ImageComparison({ dict }: { dict: Dictionary }) {
   const handleStopDragging = useCallback(() => {
     isDraggingRef.current = false
   }, [])
+
+  const handleTouchStart = useCallback((event: TouchEvent) => {
+    event.preventDefault()
+    handleStartDragging()
+  }, [handleStartDragging])
+
+  const handleTouchMove = useCallback(
+    (event: TouchEvent) => {
+      event.preventDefault()
+      if (isDraggingRef.current) {
+        handleMove(event.touches[0].clientX)
+      }
+    },
+    [handleMove]
+  )
+
 
   useEffect(() => {
     const container = containerRef.current
@@ -70,8 +77,8 @@ export function ImageComparison({ dict }: { dict: Dictionary }) {
       container.addEventListener('mousemove', handleMouseMove)
       container.addEventListener('mouseup', handleStopDragging)
       container.addEventListener('mouseleave', handleStopDragging)
-      container.addEventListener('touchstart', handleStartDragging)
-      container.addEventListener('touchmove', handleTouchMove)
+      container.addEventListener('touchstart', handleTouchStart, { passive: false })
+      container.addEventListener('touchmove', handleTouchMove, { passive: false })
       container.addEventListener('touchend', handleStopDragging)
       container.addEventListener('mouseenter', handleMouseEnter)
       container.addEventListener('mouseleave', handleMouseLeave)
@@ -81,14 +88,14 @@ export function ImageComparison({ dict }: { dict: Dictionary }) {
         container.removeEventListener('mousemove', handleMouseMove)
         container.removeEventListener('mouseup', handleStopDragging)
         container.removeEventListener('mouseleave', handleStopDragging)
-        container.removeEventListener('touchstart', handleStartDragging)
+        container.removeEventListener('touchstart', handleTouchStart)
         container.removeEventListener('touchmove', handleTouchMove)
         container.removeEventListener('touchend', handleStopDragging)
         container.removeEventListener('mouseenter', handleMouseEnter)
         container.removeEventListener('mouseleave', handleMouseLeave)
       }
     }
-  }, [handleMouseMove, handleTouchMove, handleStartDragging, handleStopDragging])
+  }, [handleMouseMove, handleTouchMove, handleStartDragging, handleStopDragging, handleTouchStart])
 
   return (
     <section className="px-4 flex flex-col gap-4 bg-background">
