@@ -8,6 +8,7 @@ import { Card, CardContent, CardFooter } from '@/components/ui/card'
 
 import { before, after } from '@/lib/assets'
 import { Dictionary } from '@/app/[lang]/dictionaries'
+import { useFont } from './context/FontProvider'
 
 export function ImageComparison({ dict }: { dict: Dictionary }) {
   const [sliderPosition, setSliderPosition] = useState(50)
@@ -15,6 +16,7 @@ export function ImageComparison({ dict }: { dict: Dictionary }) {
   const isDraggingRef = useRef(false)
   const isHoverDevice = useRef(false)
 
+  const { font } = useFont();
 
   const handleMove = useCallback(
     (clientX: number) => {
@@ -98,8 +100,7 @@ export function ImageComparison({ dict }: { dict: Dictionary }) {
   }, [handleMouseMove, handleTouchMove, handleStartDragging, handleStopDragging, handleTouchStart])
 
   return (
-    <section className="px-4 flex flex-col gap-4 bg-background">
-
+    <section className={` flex min-h-[88vh] flex-col gap-4 bg-background ${font.className}`}>
       <h1 className='mb-2'>
         {dict.imageComparison.title}
       </h1>

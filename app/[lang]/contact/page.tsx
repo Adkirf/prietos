@@ -7,7 +7,7 @@ export default async function Contact({ params: { lang } }: { params: { lang: st
     const dict = await getDictionary(lang);
 
     return (
-        <div className="container mx-auto pt-[15vh] pb-6 px-4">
+        <div className="container mx-auto pb-16 pt-4 px-4">
             <ContactForm dict={dict} />
         </div>
     );

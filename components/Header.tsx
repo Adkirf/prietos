@@ -33,7 +33,7 @@ export default function Header({ dict, lang }: { dict: Dictionary, lang: string 
                             <span className="sr-only">Toggle menu</span>
                         </Button>
                     </SheetTrigger>
-                    <SheetContent side="left" className="w-[300px] sm:w-[400px] bg-background border-r border-border">
+                    <SheetContent side="left" className={`w-[300px] sm:w-[400px] bg-background border-r border-border ${font.className}`}>
                         <nav>
                             <ul className="flex flex-col space-y-4 mt-8">
                                 {navItems.map((item, index) => (

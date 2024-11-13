@@ -3,11 +3,13 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
 import { Dictionary } from '@/app/[lang]/dictionaries'
+import { useFont } from './context/FontProvider'
 
 export function OurSerivce({ dict }: { dict: Dictionary }) {
+  const { font } = useFont();
 
   return (
-    <section className="bg-background text-foreground py-8 flex flex-col px-8 md:px-12 lg:px-16">
+    <section className={`bg-background min-h-[88vh] text-foreground py-8 flex flex-col px-8 md:px-12 lg:px-16 ${font.className}`}>
       <h1 className="mb-4">
         {dict.ourService.title}
       </h1>

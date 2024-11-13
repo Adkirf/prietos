@@ -101,12 +101,12 @@
     "contact": "Kontakt"
   },
   "footer": {
-    "title": "Bästa fönsterrenoverings- och målningstjänsterna i Stockholm",
-    "contact": "Kontakta oss",
-    "phone": "+46 123 456 789",
-    "email": "info@prietos.se",
-    "openingHours": "Mån-Fre: 08:00-17:00",
-    "address": "Storgatan 1, 111 23 Stockholm",
+    "title": "Vi garanterar kvaliteten på dina fönster",
+    "contact": "Contáctanos",
+    "phone": "+46 72 939 6021",
+    "email": "kontakt@prietoskompaniet.se",
+    "address": "Ekbacksvägen 32, 168 69 Bromma",
+    "openingHours": "Mån-Fre: 07:00 - 16:00",
     "copyright": "© 2024 Fönsterrenovering och målningstjänster. Alla rättigheter förbehållna.",
     "followUs": "Följ oss",
     "facebook": "Facebook",
@@ -215,6 +215,7 @@
       "email": "E-post",
       "message": "Meddelande",
       "send": "Skicka",
+      "sending": "Skickar...",
       "phone": "Telefonnummer"
     },
     "placeholder": {
@@ -223,5 +224,58 @@
       "message": "Ditt meddelande",
       "phone": "Ditt telefonnummer"
     }
+  },
+  "privacy": {
+    "title": "Vår integritetspolicy",
+    "snippets": [
+      {
+        "title": "",
+        "text": "Vi värnar om din integritet och därför är vi måna om att skydda de personuppgifter vi har om dig. All behandling av dina personuppgifter sker i enlighet med dataskyddsförordningen (GDPR) och vår policy beskriver vilka rättigheter du har och hur du gör dem gällande."
+      },
+      {
+        "title": "Vad är en personuppgift?",
+        "text": "Med personuppgifter menas all slags information som direkt eller indirekt kan kopplas till en person. Exempel på personuppgifter är: namn, adress, telefonnummer och personnummer. Även krypterade uppgifter och olika slags elektroniska identiteter (t.ex. IP-nummer) är personuppgifter om de kan kopplas till en person. Några vanliga exempel är: att samla in personuppgifter, att registrera och organisera dem i ett kundregister när du kontaktar oss för att få en offert, att lagra dem i t.ex. IT-system, att föra över dem till någon annan och att radera dem."
+      },
+      {
+        "title": "Varför samlar vi in uppgifter?",
+        "text": ""
+      },
+      {
+        "title": "Hantera offertförfrågan",
+        "text": "När du kontaktar oss för att få en offert sparar vi dina kontaktuppgifter för att kunna svara på din förfrågan. Vi vidarebefordrar även ritningsunderlag till våra underleverantörer där ditt namn förekommer."
+      },
+      {
+        "title": "Hantera kontaktförfråga",
+        "text": ""
+      },
+      {
+        "title": "Hantera beställning",
+        "text": "Utöver att dina uppgifter används för hantera din beställning kan uppgifterna användas för att informera dig om vad som är på gång och för att svara på frågor som du ställer till oss."
+      },
+      {
+        "title": "Vem samlas personuppgifterna in från?",
+        "text": "Personuppgifterna samlas in direkt från dig i samband med att du kontaktar oss. Personuppgifterna kan även samlas in från statens personadressregister för att se till att vi har rätt uppgifter till dig, t.ex. om du flyttar."
+      },
+      {
+        "title": "Vem delas personuppgifterna med?",
+        "text": "Dina personuppgifter delas med olika samarbetspartners som t.ex. underleverantörer av tjänster och med våra revisorer, vår och din bank och leverantörer av våra IT-system som vi behöver för vår verksamhet."
+      },
+      {
+        "title": "Rättslig grund till hantering av personuppgifter",
+        "text": "Dina personuppgifter sparas under tiden du har en beställning med garantitid och för vår bokföring. Vi sparar dina personuppgifter under garantitid, så att du kan kontakta oss om något är fel. Vi sparar dina uppgifter som behövs för vår bokföring (exempelvis alla beställningar, fakturor och betalningar) och skatteunderlag. Enligt lag måste dessa uppgifter sparas i sju år. För att inte behandla personuppgifter i onödan och utan anledning raderar vi regelbundet de personuppgifter som inte längre behövs. Uppgifterna raderas efter ovanstående kriterier.\nNär dina personuppgifter behandlas av oss har du följande rättigheter:\n\n Du har rätt att få veta vilka personuppgifter som vi behandlar om dig och kan be oss om en kopia av dessa.\nDu har rätt att få felaktiga personuppgifter om dig rättade.\nDu har rätt att be oss radera dina personuppgifter (t.ex. om vi inte har anledning att behandla dem eller om du inte längre samtycker). Även om du ber oss radera dina personuppgifter kan vi ibland behöva spara vissa personuppgifter, t.ex. när lagen kräver att vi gör det eller om behandlingen krävs för att kunna försvara eller göra gällande våra rättsliga intressen."
+      },
+      {
+        "title": "Våra skyldigheter",
+        "text": "Våra skyldigheter är att vara ansvarig för hur dina personuppgifter behandlas och bestämma för vilka ändamål uppgifterna ska användas till."
+      },
+      {
+        "title": "Kontaktuppgifter om du har frågor eller vill utöva dina rättigheter",
+        "text": "Om du har frågor om hur vi behandlar dina personuppgifter eller om du vill använda de rättigheter du har när vi behandlar dina personuppgifter är du välkommen att kontakta per e-post: kontakt@prietoskompaniet.se"
+      },
+      {
+        "title": "Säkerhetsåtgärder",
+        "text": "Dina personuppgifter behandlas enligt lagen och på ett säkert sätt. Rutiner finns för att skydda dina personuppgifter och värna din integritet. Till exempel behandlar vi bara sådana personuppgifter som vi verkligen behöver och är noga med att radera personuppgifter när de inte behövs längre. Kontinuerligt uppdateras de system som används för att behandla personuppgifter så att de är tillräckligt säkra t.ex. genom anti-virusprogram, brandväggar och system för att upptäcka personuppgifter i olika IT-system. Vi är personuppgiftsansvariga gentemot våra kunder. Vi kräver således och kontrollerar även att våra samarbetspartners behandlar dina personuppgifter på ett säkert sätt och enligt lag."
+      }
+    ]
   }
 }

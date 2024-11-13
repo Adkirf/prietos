@@ -2,11 +2,13 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Dictionary } from '@/app/[lang]/dictionaries'
+import { useFont } from './context/FontProvider'
 
 export function InformationBoxes({ dict }: { dict: Dictionary }) {
+  const { font } = useFont();
 
   return (
-    <section className="bg-background text-foreground flex flex-col px-8 md:px-12 lg:px-16">
+    <section className={`bg-background min-h-[88vh] text-foreground flex flex-col px-8 md:px-12 lg:px-16 ${font.className}`}>
       <h1>
         {dict.informative.title}
       </h1>

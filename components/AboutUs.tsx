@@ -154,9 +154,9 @@ export function AboutUs({ dict }: { dict: Dictionary }) {
             </div>
 
             {/* Scroll markers */}
-            <section ref={marker1Ref} />
-            <section ref={marker2Ref} />
-            <section ref={marker3Ref} />
+            <section className='min-h-[88vh]' ref={marker1Ref} />
+            <section className='min-h-[88vh]' ref={marker2Ref} />
+            <section className='min-h-[88vh]' ref={marker3Ref} />
         </div>
     )
 } 

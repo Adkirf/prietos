@@ -3,11 +3,13 @@
 import { CheckCircle } from 'lucide-react'
 import videoSrc from '@/public/assets/videohomprieto.mp4'
 import { Dictionary } from '@/app/[lang]/dictionaries'
+import { useFont } from './context/FontProvider';
 
 export function Hero({ dict }: { dict: Dictionary }) {
+  const { font } = useFont();
 
   return (
-    <section className="relative">
+    <section className={`relative min-h-[88vh] ${font.className}`}>
       {/* Background Video */}
       <video
         autoPlay

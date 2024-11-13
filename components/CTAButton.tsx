@@ -3,15 +3,17 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from "lucide-react";
 import { Dictionary } from '@/app/[lang]/dictionaries'
+import { useFont } from './context/FontProvider';
 
 export function CTAButton({ dict, lang }: { dict: Dictionary, lang: string }) {
+    const { font } = useFont();
 
     return (
-        <div className="flex justify-center h-[12vh] items-center">
+        <div className={`flex justify-center h-[24vh] items-center ${font.className}`}>
             <Button
                 className="
                     h-12
-                    border border-primary bg-transparent text-primary-foreground 
+                    border border-primary bg-transparent text-foreground 
                     px-8 py-4 rounded-full text-xl font-bold 
                     hover:bg-secondary hover:scale-105 
                     transition-all duration-300 

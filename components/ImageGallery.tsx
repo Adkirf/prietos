@@ -154,7 +154,7 @@ const ProjectSection = ({ project, isActive, projectIndex, lang }: {
   }, [project.images])
 
   return (
-    <section className="mb-16 relative">
+    <section className="mb-16  min-h-[88vh] relative">
       <div className='sticky top-10 z-20 bg-background text-foreground flex items-end justify-bottom h-[17vh]'>
         <h2
           className={`text-2xl font-bold m transition-all duration-300 ${isActive

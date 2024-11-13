@@ -1,11 +1,16 @@
+'use client'
+
 import { HousePlus, PaintbrushVertical, SquareArrowOutDownLeft, Hammer } from 'lucide-react'
 import { Dictionary } from '@/app/[lang]/dictionaries'
+import { useFont } from './context/FontProvider';
 
 export function WeCover({ dict }: { dict: Dictionary }) {
 
+    const { font } = useFont();
+
     return (
-        <section className="overflow-auto py-12 md:py-24 lg:py-32 bg-background">
-            <div className="container px-4 md:px-6 relative">
+        <section className={`overflow-auto min-h-[88vh] py-12 md:py-24 lg:py-32 bg-background ${font.className} `}>
+            <div className="px-4 md:px-6 relative">
                 <div className="flex relative flex-col md:flex-row gap-6 lg:gap-12">
                     <div className="lg:w-auto">
                         <div className="md:aspect-video md:h-full w-full lg:w-[300px] overflow-hidden rounded-xl ">

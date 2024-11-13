@@ -87,13 +87,6 @@
       }
     ]
   },
-  "contact": {
-    "title": "Contáctanos",
-    "name": "Nombre",
-    "email": "Correo Electrónico",
-    "message": "Mensaje",
-    "send": "Enviar"
-  },
   "header": {
     "home": "Inicio",
     "about": "Sobre Nosotros",
@@ -102,12 +95,12 @@
     "logoSrc": "/assets/prietosLogo.jpg"
   },
   "footer": {
-    "title": "Los mejores servicios de renovación y pintura de ventanas en Estocolmo",
+    "title": "Garantizamos la calidad de tus ventanas",
     "contact": "Contáctanos",
-    "phone": "+46 123 456 789",
-    "email": "info@prietos.se",
-    "openingHours": "Lun-Vie: 8:00-17:00",
-    "address": "Storgatan 1, 111 23 Estocolmo",
+    "phone": "+46 72 939 6021",
+    "email": "kontakt@prietoskompaniet.se",
+    "openingHours": "Lun-Vie: 07:00 - 16:00",
+    "address": "Ekbacksvägen 32, 168 69 Bromma",
     "copyright": "© 2024 Servicios de Renovación y Pintura de Ventanas. Todos los derechos reservados.",
     "followUs": "Síguenos",
     "facebook": "Facebook",
@@ -215,6 +208,7 @@
       "email": "Correo Electrónico",
       "message": "Mensaje",
       "send": "Enviar",
+      "sending": "Enviando...",
       "phone": "Número de Teléfono"
     },
     "placeholder": {
@@ -223,5 +217,58 @@
       "message": "Tu Mensaje",
       "phone": "Tu Número de Teléfono"
     }
+  },
+  "privacy": {
+    "title": "Nuestra Política de Privacidad",
+    "snippets": [
+      {
+        "title": "",
+        "text": "Nos preocupamos por tu privacidad y por eso estamos comprometidos a proteger los datos personales que tenemos sobre ti. Todo el procesamiento de tus datos personales se realiza de acuerdo con el Reglamento General de Protección de Datos (RGPD) y nuestra política describe qué derechos tienes y cómo ejercerlos."
+      },
+      {
+        "title": "¿Qué son los datos personales?",
+        "text": "Los datos personales son cualquier información que pueda vincularse directa o indirectamente a una persona. Ejemplos de datos personales son: nombre, dirección, número de teléfono y número de identificación personal. Incluso los datos cifrados y varios tipos de identificadores electrónicos (por ejemplo, números IP) son datos personales si se pueden vincular a una persona. Ejemplos comunes incluyen: recopilar datos personales, registrarlos y organizarlos en un registro de clientes cuando nos contactas para obtener un presupuesto, almacenarlos en sistemas informáticos, transferirlos a otra persona y eliminarlos."
+      },
+      {
+        "title": "¿Por qué recopilamos datos?",
+        "text": ""
+      },
+      {
+        "title": "Gestionar solicitudes de presupuesto",
+        "text": "Cuando nos contactas para obtener un presupuesto, guardamos tu información de contacto para responder a tu consulta. También enviamos documentación de planos a nuestros proveedores donde aparece tu nombre."
+      },
+      {
+        "title": "Gestionar solicitudes de contacto",
+        "text": ""
+      },
+      {
+        "title": "Gestionar pedidos",
+        "text": "Además de utilizar tu información para gestionar tu pedido, la información puede utilizarse para informarte sobre lo que está sucediendo y para responder preguntas que nos hagas."
+      },
+      {
+        "title": "¿De quién se recopilan los datos personales?",
+        "text": "Los datos personales se recopilan directamente de ti cuando nos contactas. Los datos personales también pueden recopilarse del registro de direcciones personales del estado para asegurarnos de que tengamos la información correcta sobre ti, por ejemplo, si te mudas."
+      },
+      {
+        "title": "¿Con quién se comparten los datos personales?",
+        "text": "Tus datos personales se comparten con varios socios como subcontratistas de servicios y con nuestros auditores, nuestro banco y el tuyo, y proveedores de nuestros sistemas informáticos que necesitamos para nuestras operaciones."
+      },
+      {
+        "title": "Base legal para el manejo de datos personales",
+        "text": "Tus datos personales se almacenan durante el tiempo que tengas un pedido con período de garantía y para nuestra contabilidad. Mantenemos tus datos personales durante el período de garantía para que puedas contactarnos si algo está mal. Guardamos tu información necesaria para nuestra contabilidad (como todos los pedidos, facturas y pagos) y documentación fiscal. Por ley, estos registros deben conservarse durante siete años. Para evitar procesar datos personales innecesariamente y sin motivo, eliminamos regularmente los datos personales que ya no se necesitan. Los datos se eliminan según los criterios anteriores.\nCuando procesamos tus datos personales, tienes los siguientes derechos:\n\nTienes derecho a saber qué datos personales procesamos sobre ti y puedes solicitar una copia de estos.\nTienes derecho a que se corrijan los datos personales incorrectos sobre ti.\nTienes derecho a solicitar que eliminemos tus datos personales (por ejemplo, si no tenemos motivo para procesarlos o si ya no das tu consentimiento). Incluso si nos pides que eliminemos tus datos personales, es posible que a veces necesitemos guardar ciertos datos personales, por ejemplo, cuando la ley lo requiere o si el procesamiento es necesario para defender o hacer valer nuestros intereses legales."
+      },
+      {
+        "title": "Nuestras obligaciones",
+        "text": "Nuestras obligaciones son ser responsables de cómo se procesan tus datos personales y determinar para qué fines se deben utilizar los datos."
+      },
+      {
+        "title": "Información de contacto si tienes preguntas o quieres ejercer tus derechos",
+        "text": "Si tienes preguntas sobre cómo procesamos tus datos personales o si quieres usar los derechos que tienes cuando procesamos tus datos personales, puedes contactarnos por correo electrónico: contacto@prietoskompaniet.se"
+      },
+      {
+        "title": "Medidas de seguridad",
+        "text": "Tus datos personales se procesan de acuerdo con la ley y de manera segura. Existen procedimientos para proteger tus datos personales y salvaguardar tu privacidad. Por ejemplo, solo procesamos los datos personales que realmente necesitamos y somos cuidadosos al eliminar los datos personales cuando ya no se necesitan. Los sistemas utilizados para procesar datos personales se actualizan continuamente para ser lo suficientemente seguros, por ejemplo, a través de programas antivirus, cortafuegos y sistemas para detectar datos personales en varios sistemas informáticos. Somos controladores de datos en relación con nuestros clientes. Por lo tanto, exigimos y verificamos que nuestros socios procesen tus datos personales de manera segura y de acuerdo con la ley."
+      }
+    ]
   }
 }

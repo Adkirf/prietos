@@ -15,7 +15,7 @@ body {
 @layer base {
   :root {
     /* Light Theme */
-    --background: 0 0% 100%; /* #FFFFFF - Pure white for a clean and open feel */
+    --background: 60 20% 90%; /* #FAFAF7 - Very light white with subtle warm grey-yellow tint */
     --foreground: 0 0% 13%; /* #222222 - Dark gray for readability, less stark than pure black */
     --card: 0 0% 100%;
     --card-foreground: 0 0% 13%;
@@ -75,7 +75,7 @@ h1{
 }
 
 section{
-  @apply w-full min-h-[88vh] items-center justify-center ;
+  @apply w-full items-center justify-center ;
 }
 
 @layer base {

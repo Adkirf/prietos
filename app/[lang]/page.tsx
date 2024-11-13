@@ -14,7 +14,7 @@ export default async function Home({
     const dict = await getDictionary(lang)
 
     return (
-        <div className="w-full h-full flex flex-col gap-10 overflow-auto">
+        <div className="w-full h-full flex flex-col gap-10 pb-16 overflow-auto">
             <Hero dict={dict} />
             <ImageComparison dict={dict} />
             <InformationBoxes dict={dict} />
