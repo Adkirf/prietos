@@ -35,7 +35,7 @@ export default function LanguageSwitcher({ currentLang }: { currentLang: string 
 
     // Check if currentLang is a valid key in languages
     const isValidLang = currentLang in languages;
-    const defaultLang = isValidLang ? currentLang : 'en'; // Changed fallback to 'en'
+    const defaultLang = isValidLang ? currentLang : 'sv'; // Changed fallback to 'sv'
 
     return (
         <Select onValueChange={switchLanguage} defaultValue={defaultLang}>

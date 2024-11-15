@@ -32,7 +32,7 @@ export default async function LangLayout({
                             {children}
                             <FontToggle />
                         </main>
-                        <Footer dict={dict} />
+                        <Footer dict={dict} lang={params.lang} />
                     </div>
 
                 </div>

@@ -1,13 +1,13 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
-import { match } from '@formatjs/intl-localematcher'
-import Negotiator from 'negotiator'
+/* import { match } from '@formatjs/intl-localematcher'
+import Negotiator from 'negotiator' */
 
 // Add the locales you want to support
 export const locales = ['en', 'sv', 'es']
 export const defaultLocale = 'sv'
 
-// Get the preferred locale from headers
+/* // Get the preferred locale from headers
 function getLocale(request: NextRequest) {
     // Get accept-language from request headers
     const acceptLanguage = request.headers.get('accept-language') || ''
@@ -17,7 +17,7 @@ function getLocale(request: NextRequest) {
     const languages = new Negotiator({ headers: negotiatorHeaders }).languages()
 
     return match(languages, locales, defaultLocale) // Will default to 'sv' if no match
-}
+} */
 
 export function middleware(request: NextRequest) {
     const pathname = request.nextUrl.pathname
@@ -27,10 +27,9 @@ export function middleware(request: NextRequest) {
         (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
     )
 
-    // Redirect if there is no locale
+    // Redirect if there is no locale, always using 'sv' as default
     if (pathnameIsMissingLocale) {
-        const locale = getLocale(request)
-        request.nextUrl.pathname = `/${locale}${pathname}`
+        request.nextUrl.pathname = `/sv${pathname}`
         return NextResponse.redirect(request.nextUrl)
     }
 }

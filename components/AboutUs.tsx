@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { useEffect, useState, useRef, useCallback } from 'react'
 import { Dictionary } from '@/app/[lang]/dictionaries'
+import { Card, CardContent, CardFooter } from '@/components/ui/card'
 
 import { about1, about2, about3, about4 } from '@/lib/assets'
 
@@ -30,20 +31,26 @@ export function AboutUs({ dict }: { dict: Dictionary }) {
     const handleIntersection = useCallback((entries: IntersectionObserverEntry[]) => {
         entries.forEach((entry) => {
             if (entry.target === marker1Ref.current) {
-                if (entry.isIntersecting && currentIndex === 0) {
+                if (entry.isIntersecting) {
                     setCurrentIndex(1)
+                } else if (!entry.isIntersecting && entry.boundingClientRect.top > 0) {
+                    setCurrentIndex(0)
                 }
             } else if (entry.target === marker2Ref.current) {
-                if (entry.isIntersecting && currentIndex === 1) {
+                if (entry.isIntersecting) {
                     setCurrentIndex(2)
+                } else if (!entry.isIntersecting && entry.boundingClientRect.top > 0) {
+                    setCurrentIndex(1)
                 }
             } else if (entry.target === marker3Ref.current) {
-                if (entry.isIntersecting && currentIndex === 2) {
+                if (entry.isIntersecting) {
                     setCurrentIndex(3)
+                } else if (!entry.isIntersecting && entry.boundingClientRect.top > 0) {
+                    setCurrentIndex(2)
                 }
             }
         })
-    }, [currentIndex])
+    }, [])
 
     // Set up intersection observer
     useEffect(() => {
@@ -85,43 +92,39 @@ export function AboutUs({ dict }: { dict: Dictionary }) {
         <div className="relative bg-background" style={{ height: '400vh' }}>
             <div className="sticky top-[15vh] md:top-0 left-0 right-0 h-[85vh] md:h-screen flex items-start md:items-center justify-center px-4">
                 <div className="flex flex-col md:flex-row items-center justify-center max-w-6xl mx-auto relative">
-                    {/*  <Button
-                        variant="ghost"
-                        className="absolute left-0 md:-left-16 z-10"
-                        onClick={prevSlide}
-                    >
-                        <ChevronLeft className="h-6 w-6" />
-                    </Button> */}
+                    <Card className="w-full md:w-[250px] lg:w-[375px] pt-6 mb-6">
+                        <CardContent className='pb-0'>
+                            <div className="relative md:mb-0">
+                                <div className="
+                                    w-full aspect-video md:h-[250px] lg:h-[375px]
+                                    rounded-full shadow-lg overflow-hidden
+                                ">
+                                    <Image
+                                        src={images[currentIndex].src}
+                                        alt="About Us"
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 250px, 375px"
+                                        className={`rounded-lg object-cover transition-opacity duration-500 ease-in-out
+                                            ${isImageAnimating ? 'opacity-0' : 'opacity-100'}
+                                        `}
+                                    />
+                                </div>
+                            </div>
+                        </CardContent>
+                        <CardFooter className="flex justify-center gap-2 py-4">
+                            {[0, 1, 2, 3].map((index) => (
+                                <button
+                                    key={index}
+                                    onClick={() => setCurrentIndex(index)}
+                                    className={`h-1 w-12 rounded-full transition-all duration-300 ${currentIndex === index
+                                        ? 'bg-primary scale-y-150'
+                                        : 'bg-muted'
+                                        }`}
+                                />
+                            ))}
+                        </CardFooter>
+                    </Card>
 
-                    <div className="relative md:mb-0">
-                        <div className="
-                            w-[175px] md:w-[250px] lg:w-[375px]
-                            h-[175px] md:h-[250px] lg:h-[375px]
-                            rounded-full shadow-lg overflow-hidden
-                        ">
-                            <Image
-                                src={images[currentIndex].src}
-                                alt="About Us"
-                                fill
-                                sizes="(max-width: 768px) 175px, (max-width: 1024px) 250px, 375px"
-                                className={`rounded-full object-cover transition-opacity duration-500 ease-in-out
-                                    ${isImageAnimating ? 'opacity-0' : 'opacity-100'}
-                                `}
-                            />
-                        </div>
-                    </div>
-                    <div className="py-4 md:px-4 flex justify-center">
-                        {[0, 1, 2, 3].map((index) => (
-                            <button
-                                key={index}
-                                onClick={() => setCurrentIndex(index)}
-                                className={`w-3 h-3 rounded-full mx-1 transition-all duration-300 ${currentIndex === index
-                                    ? 'bg-primary scale-125'
-                                    : 'bg-muted'
-                                    }`}
-                            />
-                        ))}
-                    </div>
                     <div className="md:ml-12 lg:ml-16 max-w-md">
                         <h2 className={`text-3xl md:text-4xl font-bold mb-4 text-foreground transition-all ${isAnimating ? 'duration-0' : 'duration-500'} ease-in-out
                             ${isAnimating ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}
@@ -134,17 +137,7 @@ export function AboutUs({ dict }: { dict: Dictionary }) {
                             {dict.aboutUs.descriptions[currentIndex]}
                         </p>
                     </div>
-
-                    {/*    <Button
-                        variant="ghost"
-                        className="absolute right-0 md:-right-16 z-10"
-                        onClick={nextSlide}
-                    >
-                        <ChevronRight className="h-6 w-6" />
-                    </Button> */}
                 </div>
-
-
             </div>
 
             {/* Scroll markers */}

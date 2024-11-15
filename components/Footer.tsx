@@ -8,7 +8,7 @@ import { useFont } from './context/FontProvider';
 import { prietosLogo } from '@/lib/assets';
 import { Dictionary } from '@/app/[lang]/dictionaries'
 
-export default function Footer({ dict }: { dict: Dictionary }) {
+export default function Footer({ dict, lang }: { dict: Dictionary, lang: string }) {
 
     const { font } = useFont();
 
@@ -75,12 +75,12 @@ export default function Footer({ dict }: { dict: Dictionary }) {
                         <h3 className="text-lg font-semibold mb-4">{dict.footer.legal}</h3>
                         <ul className="space-y-2">
                             <li>
-                                <Link href="/" className="hover:text-[#35A30D] transition-colors">
+                                <Link href={`/${lang}`} className="hover:text-[#35A30D] transition-colors">
                                     {dict.footer.termsAndConditions}
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/privacy" className="hover:text-[#35A30D] transition-colors">
+                                <Link href={`/${lang}/privacy`} className="hover:text-[#35A30D] transition-colors">
                                     {dict.footer.privacyPolicy}
                                 </Link>
                             </li>
