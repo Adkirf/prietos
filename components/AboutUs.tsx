@@ -88,7 +88,6 @@ export function AboutUs({ dict }: { dict: Dictionary }) {
         }
     }, [currentIndex])
 
-    //COmmenting som
     return (
         <div className="relative bg-background" style={{ height: '400vh' }}>
             <div className="sticky top-[15vh] md:top-0 left-0 right-0 h-[85vh] md:h-screen flex items-start md:items-center justify-center px-4">
@@ -98,8 +97,7 @@ export function AboutUs({ dict }: { dict: Dictionary }) {
                             <div className="relative md:mb-0">
                                 <div className="
                                     w-full aspect-video md:h-[250px] lg:h-[375px]
-                                    rounded-full shadow-lg overflow-hidden
-                                ">
+                                    rounded-full shadow-lg overflow-hidden">
                                     <Image
                                         src={images[currentIndex].src}
                                         alt="About Us"

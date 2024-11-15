@@ -6,7 +6,7 @@ export async function generateStaticParams() {
 }
 
 export const metadata: Metadata = {
-  title: 'Internationalized Site',
+  title: 'Prietos Kompaniet',
   description: 'Multilingual website using Next.js 13+ internationalization',
 }
 

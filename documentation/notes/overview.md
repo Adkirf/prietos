@@ -1,5 +1,7 @@
-# Project Structure
+# Description
+Website for Prietos Kompaniet, a window renovation company in Sweden. The website has mulitlanguage support for english, spanish and swedish, is built with Next.js 14, uses the app router and gives the user information about the company, its services, projects and contact information.
 
+# Project Structure
 ** General ** 
 - Use next.js version 14 app router
 - Use shadcn/ui components wherever possible
@@ -9,11 +11,11 @@
 
 ** Pages **
 - app/layout app metadata and language routing
-- app/[lang]/layout.tsx app layout, Context Providers
+- app/[lang]/layout.tsx app layout, Context Providers, directories with english, spanish and swedish (default)
 - app/[lang]/page.tsx landing page
 - app/[lang]/about/page.tsx about page
-- app/[lang]/projects/page.tsx projects page
-- app/[lang]/contact/page.tsx contact page
+- app/[lang]/projects/page.tsx projects-gallerypage
+- app/[lang]/contact/page.tsx contact-formular page
 
 ** Utilities ** 
 - internationalization: middleware.ts, app/[lang]/dictionaries.ts, app/layout.tsx
