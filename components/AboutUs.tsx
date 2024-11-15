@@ -30,22 +30,16 @@ export function AboutUs({ dict }: { dict: Dictionary }) {
     const handleIntersection = useCallback((entries: IntersectionObserverEntry[]) => {
         entries.forEach((entry) => {
             if (entry.target === marker1Ref.current) {
-                if (entry.isIntersecting && currentIndex < 1) {
+                if (entry.isIntersecting && currentIndex === 0) {
                     setCurrentIndex(1)
-                } else if (!entry.isIntersecting && currentIndex === 1) {
-                    setCurrentIndex(0)
                 }
             } else if (entry.target === marker2Ref.current) {
-                if (entry.isIntersecting && currentIndex < 2) {
+                if (entry.isIntersecting && currentIndex === 1) {
                     setCurrentIndex(2)
-                } else if (!entry.isIntersecting && currentIndex === 2) {
-                    setCurrentIndex(1)
                 }
             } else if (entry.target === marker3Ref.current) {
-                if (entry.isIntersecting && currentIndex < 3) {
+                if (entry.isIntersecting && currentIndex === 2) {
                     setCurrentIndex(3)
-                } else if (!entry.isIntersecting && currentIndex === 3) {
-                    setCurrentIndex(2)
                 }
             }
         })
@@ -55,8 +49,8 @@ export function AboutUs({ dict }: { dict: Dictionary }) {
     useEffect(() => {
         const options = {
             root: null,
-            rootMargin: '0px',
-            threshold: 0.5,
+            rootMargin: '-45% 0px -45% 0px',
+            threshold: 0.1,
         }
 
         const observer = new IntersectionObserver(handleIntersection, options)

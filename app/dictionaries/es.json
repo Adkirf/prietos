@@ -121,6 +121,11 @@
     "point4": "Hasta 50.000 SEK en Beneficios Fiscales",
     "videoError": "Tu navegador no soporta la etiqueta de video."
   },
+  "CTA": {
+    "contactUs": "Contáctanos",
+    "bookConsultation": "Reserva una consulta gratuita",
+    "seeOurProjects": "Mire nuestros proyectos"
+  },
   "imageComparison": {
     "title": "Para nosotros, tu satisfacción es primordial.",
     "description": "¡Nos esforzamos por combinar artesanía de alta calidad con soluciones sostenibles para preservar el ecosistema Y tu billetera!",
@@ -139,6 +144,9 @@
     "text2": "Las ventanas antiguas de madera están hechas de madera de alta calidad y pueden durar muchos años después de una renovación profesional.",
     "text3": "Nuestro vidrio energético recomendado está diseñado para reflejar la radiación de calor de onda larga, lo que mantiene hasta un 50% más de calor en el interior."
   },
+  "whatWeDo": {
+    "title": "Nostros Hacemos."
+  },
   "weCover": {
     "title": "¡Te cubrimos!",
     "service1Title": "Pintura de ventanas",
@@ -148,8 +156,7 @@
     "service3Title": "Reemplazo de vidrios",
     "service3Description": "Reemplazamos todo tipo de vidrios, incluyendo vidrio energético que reduce los costos de energía.",
     "service4Title": "Reparación de daños por pudrición",
-    "service4Description": "Reemplazo de partes o marcos completos de ventanas en caso de daño.",
-    "CTA": "Reserva una consulta gratuita"
+    "service4Description": "Reemplazo de partes o marcos completos de ventanas en caso de daño."
   },
   "ourService": {
     "title": "Nuestro Servicio.",
@@ -160,8 +167,7 @@
     "rightSection": {
       "title": "Limpieza de ventanas gratis",
       "description": "Después de renovar tus ventanas, ofrecemos un servicio gratuito de limpieza para que puedas disfrutar plenamente de tus ventanas."
-    },
-    "CTA": "Contáctanos"
+    }
   },
   "aboutUs": {
     "slogan": "Las Mejores Ventanas en Estocolmo",

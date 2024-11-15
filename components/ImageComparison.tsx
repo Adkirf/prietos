@@ -100,7 +100,7 @@ export function ImageComparison({ dict }: { dict: Dictionary }) {
   }, [handleMouseMove, handleTouchMove, handleStartDragging, handleStopDragging, handleTouchStart])
 
   return (
-    <section className={` flex min-h-[88vh] flex-col gap-4 bg-background ${font.className}`}>
+    <section className={` flex min-h-[88vh] px-4 md:px-0 flex-col gap-4 bg-background ${font.className}`}>
       <h1 className='mb-2'>
         {dict.imageComparison.title}
       </h1>
@@ -114,7 +114,7 @@ export function ImageComparison({ dict }: { dict: Dictionary }) {
               src={before.src}
               alt={before.alt}
               fill
-              className="object-cover rounded-lg"
+              className="object-contain rounded-lg"
             />
             <div
               style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
@@ -124,7 +124,7 @@ export function ImageComparison({ dict }: { dict: Dictionary }) {
                 src={after.src}
                 alt={after.alt}
                 fill
-                className="object-cover rounded-lg"
+                className="object-contain rounded-lg"
               />
             </div>
             <div

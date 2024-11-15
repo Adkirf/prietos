@@ -122,6 +122,11 @@
     "point4": "Up to SEK 50,000 Tax Benefits",
     "videoError": "Your browser does not support the video tag."
   },
+  "CTA": {
+    "contactUs": "Contact Us",
+    "bookConsultation": "Book a Free Consultation",
+    "seeOurProjects": "See Our Projects"
+  },
   "imageComparison": {
     "title": "For us, your satisfaction is paramount.",
     "description": "We strive to combine high-quality craftsmanship with sustainable solutions to preserve the ecosystem AND your wallet!",
@@ -140,6 +145,9 @@
     "text2": "Old wooden windows are made of high-quality timber and can last for many years after a professional renovation.",
     "text3": "Our recommended energy glass is designed to reflect long-wave head radiation which keeps up to 50% more warmth inside."
   },
+  "whatWeDo": {
+    "title": "What we do."
+  },
   "weCover": {
     "title": "We got you covered!",
     "service1Title": "Window painting",
@@ -149,8 +157,7 @@
     "service3Title": "Glass replacement",
     "service3Description": "We replace all types of glass, including energy glass that reduces energy costs.",
     "service4Title": "Repairing rot damage",
-    "service4Description": "Replacing parts or entire window frames in case of damage.",
-    "CTA": "Book a free consultation"
+    "service4Description": "Replacing parts or entire window frames in case of damage."
   },
   "ourService": {
     "title": "Our Service.",
@@ -161,8 +168,7 @@
     "rightSection": {
       "title": "Free window cleaning",
       "description": "After we have renovated your windows, we offer a free window cleaning service so that you can fully enjoy your windows."
-    },
-    "CTA": "Get in touch"
+    }
   },
   "aboutUs": {
     "slogan": "Best Windows in Stockholm",

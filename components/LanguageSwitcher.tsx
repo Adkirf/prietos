@@ -28,8 +28,8 @@ export default function LanguageSwitcher({ currentLang }: { currentLang: string 
     };
 
     const languages = {
-        en: { src: englishFlag.src, alt: englishFlag.alt },
         sv: { src: swedishFlag.src, alt: swedishFlag.alt },
+        en: { src: englishFlag.src, alt: englishFlag.alt },
         es: { src: spanishFlag.src, alt: spanishFlag.alt },
     };
 

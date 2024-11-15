@@ -4,6 +4,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
 import { Dictionary } from '@/app/[lang]/dictionaries'
 import { useFont } from './context/FontProvider'
+import { Button } from "./ui/button"
+import { Eye } from "lucide-react"
 
 export function OurSerivce({ dict }: { dict: Dictionary }) {
   const { font } = useFont();
@@ -40,6 +42,22 @@ export function OurSerivce({ dict }: { dict: Dictionary }) {
           </div>
         </div>
       </Card>
+      <Button
+        className="
+                    mt-8
+                    h-10
+                    border border-primary bg-transparent text-foreground 
+                    px-6 py-3 rounded-full text-base font-bold 
+                    hover:bg-secondary hover:scale-105 
+                    transition-all duration-300 
+                    shadow-lg hover:shadow-xl
+                    flex items-center
+                "
+        onClick={() => window.location.href = `/projects`}
+      >
+        <Eye className="h-5" />
+        {dict.CTA.seeOurProjects}
+      </Button>
     </section>
   )
 }

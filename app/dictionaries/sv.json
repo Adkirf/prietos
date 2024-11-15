@@ -127,6 +127,11 @@
     "point4": "Upp till 50.000 kr i skatteförmåner",
     "videoError": "Din webbläsare stöder inte videospelaren."
   },
+  "CTA": {
+    "contactUs": "Kontakta oss",
+    "bookConsultation": "Boka en gratis konsultation",
+    "seeOurProjects": "Se våra projekt"
+  },
   "imageComparison": {
     "title": "För oss är din tillfredsställelse av största vikt.",
     "description": "Vi strävar efter att kombinera högkvalitativt hantverk med hållbara lösningar för att bevara ekosystemet OCH din plånbok!",
@@ -145,6 +150,9 @@
     "text2": "Old wooden windows are made of high-quality timber and can last for many years after a professional renovation.",
     "text3": "Or recommended energy glass is designed to reflect long-wave head radiation which keeps up to 50% more warmth inside."
   },
+  "whatWeDo": {
+    "title": "Vad vi gör."
+  },
   "weCover": {
     "title": "Vi täcker upp för dig!",
     "service1Title": "Målning av fönster",
@@ -154,8 +162,7 @@
     "service3Title": "Glasbyte",
     "service3Description": "Vi byter alla typer av glas, inklusive energiglas som sänker energikostnaderna.",
     "service4Title": "Reparation av rötskador",
-    "service4Description": "Byte av delar eller hela fönsterkarmar vid skador.",
-    "CTA": "Boka Gratis Konsultation"
+    "service4Description": "Byte av delar eller hela fönsterkarmar vid skador."
   },
   "ourService": {
     "title": "Vår tjänst",
@@ -166,8 +173,7 @@
     "rightSection": {
       "title": "Gratis fönsterputsning",
       "description": "Efter att vi har renoverat dina fönster, erbjuder vi en fri fönsterrengöringsservice så att du kan njuta av dina fönster."
-    },
-    "CTA": "Kontakta oss"
+    }
   },
   "aboutUs": {
     "title": "Om oss",

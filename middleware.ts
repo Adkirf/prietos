@@ -5,17 +5,18 @@ import Negotiator from 'negotiator'
 
 // Add the locales you want to support
 export const locales = ['en', 'sv', 'es']
-export const defaultLocale = 'en'
+export const defaultLocale = 'sv'
 
 // Get the preferred locale from headers
 function getLocale(request: NextRequest) {
-    const negotiatorHeaders: Record<string, string> = {}
-    request.headers.forEach((value, key) => (negotiatorHeaders[key] = value))
+    // Get accept-language from request headers
+    const acceptLanguage = request.headers.get('accept-language') || ''
+    const negotiatorHeaders = { 'accept-language': acceptLanguage }
 
     // @ts-ignore locales are readonly
     const languages = new Negotiator({ headers: negotiatorHeaders }).languages()
 
-    return match(languages, locales, defaultLocale)
+    return match(languages, locales, defaultLocale) // Will default to 'sv' if no match
 }
 
 export function middleware(request: NextRequest) {

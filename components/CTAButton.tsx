@@ -22,7 +22,7 @@ export function CTAButton({ dict, lang }: { dict: Dictionary, lang: string }) {
                 "
                 onClick={() => window.location.href = `/${lang}/contact`}
             >
-                {dict.ourService.CTA}
+                {dict.CTA.contactUs}
                 <ArrowRight className="ml-3 h-6 w-6" />
             </Button>
         </div>

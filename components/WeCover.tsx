@@ -67,7 +67,7 @@ export function WeCover({ dict }: { dict: Dictionary }) {
                             </div>
                         </div>
                         <button className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">
-                            {dict.weCover.CTA}
+                            {dict.CTA.bookConsultation}
                         </button>
                     </div>
                 </div>

@@ -6,7 +6,7 @@ export default async function Projects({ params: { lang } }: { params: { lang: s
     const dict = await getDictionary(lang);
 
     return (
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto pb-16 px-4">
             <ImageGallery dict={dict} />
             <CTAButton dict={dict} lang={lang} />
         </div>
