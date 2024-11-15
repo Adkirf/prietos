@@ -88,6 +88,7 @@ export function AboutUs({ dict }: { dict: Dictionary }) {
         }
     }, [currentIndex])
 
+    //COmmenting som
     return (
         <div className="relative bg-background" style={{ height: '400vh' }}>
             <div className="sticky top-[15vh] md:top-0 left-0 right-0 h-[85vh] md:h-screen flex items-start md:items-center justify-center px-4">
