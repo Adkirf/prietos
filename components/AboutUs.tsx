@@ -94,7 +94,7 @@ export function AboutUs({ dict }: { dict: Dictionary }) {
                 <div className="flex flex-col md:flex-row items-center justify-center max-w-6xl mx-auto relative">
                     <Card className="w-full md:w-[250px] lg:w-[375px] pt-6 mb-6">
                         <CardContent className='pb-0'>
-                            <div className="relative md:mb-0">
+                            <div className="relative ">
                                 <div className="
                                     w-full aspect-video md:h-[250px] lg:h-[375px]
                                     rounded-full shadow-lg overflow-hidden">

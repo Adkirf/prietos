@@ -18,15 +18,31 @@ export default function FlipCube({ dict }: { dict: Dictionary }) {
     cubeVideo3,
     cubeVideo4,
     cubeVideo4,
-    cubeVideo3
+    cubeVideo4
   ]
 
   const { font } = useFont();
+
+  const getActiveFace = useCallback((currentFace: number) => {
+    switch (currentFace) {
+      case 0: return 'front';
+      case 1: return 'right';
+      case 2: return 'back';
+      case 3: return 'left';
+      case 4: return 'bottom';//front
+      case 5: return 'top';//top
+      default: return 'front';
+    }
+  }, []);
 
   const handleRotate = useCallback(() => {
     setCurrentFace((prev) => (prev + 1) % faces.length)
     setLastInteraction(Date.now())
   }, [faces.length])
+
+  useEffect(() => {
+    console.log(currentFace)
+  }, [currentFace])
 
   // Auto-rotation effect
   useEffect(() => {
@@ -52,15 +68,15 @@ export default function FlipCube({ dict }: { dict: Dictionary }) {
 
         @media (min-width: 768px) {
           .cube-container {
-            width: 300px;
-            height: 300px;
+            width: 280px;
+            height: 280px;
           }
         }
 
         @media (min-width: 1024px) {
           .cube-container {
-            width: 350px;
-            height: 350px;
+            width: 300px;
+            height: 300px;
           }
         }
 
@@ -87,13 +103,12 @@ export default function FlipCube({ dict }: { dict: Dictionary }) {
           justify-content: center;
           box-sizing: border-box;
           overflow: hidden;
-          border: 4px solid hsl(var(--primary));
-          box-shadow: 0 0 20px hsl(var(--muted-foreground) / 0.3);
+          border: 4px solid hsl(var(--muted));
           background-color: hsl(var(--muted) / 0.1);
           border-radius: var(--radius);
         }
 
-        .face:hover {
+        .face.active {
           border-color: hsl(var(--secondary));
         }
 
@@ -104,29 +119,29 @@ export default function FlipCube({ dict }: { dict: Dictionary }) {
           border-radius: calc(var(--radius) - 4px);
         }
 
-        .face.front { transform: rotateY(0deg) translateZ(130px); }
-        .face.right { transform: rotateY(90deg) translateZ(130px); }
-        .face.back { transform: rotateY(180deg) translateZ(130px); }
-        .face.left { transform: rotateY(-90deg) translateZ(130px); }
-        .face.top { transform: rotateX(90deg) translateZ(130px); }
-        .face.bottom { transform: rotateX(-90deg) translateZ(130px); }
+        .face.front { transform: rotateY(0deg) translateZ(125px); }
+        .face.right { transform: rotateY(90deg) translateZ(125px); }
+        .face.back { transform: rotateY(180deg) translateZ(125px); }
+        .face.left { transform: rotateY(-90deg) translateZ(125px); }
+        .face.top { transform: rotateX(90deg) translateZ(125px); }
+        .face.bottom { transform: rotateX(-90deg) translateZ(125px); }
 
         @media (min-width: 768px) {
-          .face.front { transform: rotateY(0deg) translateZ(155px); }
-          .face.right { transform: rotateY(90deg) translateZ(155px); }
-          .face.back { transform: rotateY(180deg) translateZ(155px); }
-          .face.left { transform: rotateY(-90deg) translateZ(155px); }
-          .face.top { transform: rotateX(90deg) translateZ(155px); }
-          .face.bottom { transform: rotateX(-90deg) translateZ(155px); }
+          .face.front { transform: rotateY(0deg) translateZ(140px); }
+          .face.right { transform: rotateY(90deg) translateZ(140px); }
+          .face.back { transform: rotateY(180deg) translateZ(140px); }
+          .face.left { transform: rotateY(-90deg) translateZ(140px); }
+          .face.top { transform: rotateX(90deg) translateZ(140px); }
+          .face.bottom { transform: rotateX(-90deg) translateZ(140px); }
         }
 
         @media (min-width: 1024px) {
-          .face.front { transform: rotateY(0deg) translateZ(180px); }
-          .face.right { transform: rotateY(90deg) translateZ(180px); }
-          .face.back { transform: rotateY(180deg) translateZ(180px); }
-          .face.left { transform: rotateY(-90deg) translateZ(180px); }
-          .face.top { transform: rotateX(90deg) translateZ(180px); }
-          .face.bottom { transform: rotateX(-90deg) translateZ(180px); }
+          .face.front { transform: rotateY(0deg) translateZ(150px); }
+          .face.right { transform: rotateY(90deg) translateZ(150px); }
+          .face.back { transform: rotateY(180deg) translateZ(150px); }
+          .face.left { transform: rotateY(-90deg) translateZ(150px); }
+          .face.top { transform: rotateX(90deg) translateZ(150px); }
+          .face.bottom { transform: rotateX(-90deg) translateZ(150px); }
         }
       `}</style>
       <h1 className='mb-2'>
@@ -140,7 +155,7 @@ export default function FlipCube({ dict }: { dict: Dictionary }) {
       >
         <div className={`cube show-${faces[currentFace]}`}>
           {faces.map((face, index) => (
-            <div key={face} className={`face ${face}`}>
+            <div key={face} className={`face ${face} ${face === getActiveFace(currentFace) ? 'active' : ''}`}>
               <video
                 autoPlay
                 muted

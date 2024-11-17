@@ -10,7 +10,7 @@ export function WeCover({ dict }: { dict: Dictionary }) {
 
     return (
         <section className={`overflow-auto min-h-[88vh] py-12 md:py-24 lg:py-32 bg-background ${font.className} `}>
-            <div className="px-4 md:px-6 relative">
+            <div className="px-4 md:px-6 max-w-4xl mx-auto relative">
                 <div className="flex relative flex-col md:flex-row gap-6 lg:gap-12">
                     <div className="lg:w-auto">
                         <div className="md:aspect-video md:h-full w-full lg:w-[300px] overflow-hidden rounded-xl ">

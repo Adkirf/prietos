@@ -1,4 +1,4 @@
-import { AboutUs } from '@/components/AboutUs';
+import { AboutUs } from '@/components/AboutUsCurrent';
 import { CTAButton } from '@/components/CTAButton';
 import { getDictionary } from "../dictionaries"
 

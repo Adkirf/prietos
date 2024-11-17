@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 import { Menu } from 'lucide-react'
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
 import LanguageSwitcher from './LanguageSwitcher'
 import { ThemeToggle } from './context/ThemeToggle'
@@ -34,6 +34,7 @@ export default function Header({ dict, lang }: { dict: Dictionary, lang: string 
                         </Button>
                     </SheetTrigger>
                     <SheetContent side="left" className={`w-[300px] sm:w-[400px] bg-background border-r border-border ${font.className}`}>
+                        <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
                         <nav>
                             <ul className="flex flex-col space-y-4 mt-8">
                                 {navItems.map((item, index) => (
