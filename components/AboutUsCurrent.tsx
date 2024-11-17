@@ -18,14 +18,9 @@ export function AboutUs({ dict }: { dict: Dictionary }) {
     }, [])
 
     useEffect(() => {
-        console.log(currentImageIndex)
-    }, [currentImageIndex])
-
-    useEffect(() => {
         lastScrollY.current = window.scrollY
 
         const calculateOpacity = () => {
-            const scrollDirection = window.scrollY > lastScrollY.current ? 'down' : 'up'
             lastScrollY.current = window.scrollY
 
             const newOpacities = sectionRefs.current.map((ref, index) => {
@@ -33,7 +28,6 @@ export function AboutUs({ dict }: { dict: Dictionary }) {
                 const rect = ref.getBoundingClientRect()
                 const viewportHeight = window.innerHeight
                 const elementTop = rect.top
-                const elementBottom = rect.bottom
 
                 if (elementTop >= viewportHeight * 0.5) {
                     return 1
