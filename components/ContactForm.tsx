@@ -6,21 +6,48 @@ import { Textarea } from "@/components/ui/textarea"
 import { Separator } from "@/components/ui/separator"
 import { Mail, Phone } from "lucide-react"
 import { Dictionary } from '@/app/[lang]/dictionaries'
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export default function ContactForm({ dict }: { dict: Dictionary }) {
 
   const [formData, setFormData] = useState({ name: '', phone: '', email: '', message: '' });
   const [status, setStatus] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [errors, setErrors] = useState<{ [key: string]: string }>({});
+  const [lastSubmissionTime, setLastSubmissionTime] = useState<number>(0);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
+  const validateForm = () => {
+    const newErrors: { [key: string]: string } = {};
+
+    if (!formData.name.trim()) {
+      newErrors.name = dict.contactForm.validation.nameRequired;
+    }
+
+    if (!formData.email && !formData.phone) {
+      newErrors.contact = dict.contactForm.validation.contactRequired;
+    }
+
+    const now = Date.now();
+    if (now - lastSubmissionTime < 10000) {
+      newErrors.rateLimit = dict.contactForm.validation.tooManyRequests;
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (!validateForm()) {
+      return;
+    }
+
     setIsLoading(true);
     try {
       const response = await fetch('/api/contact', {
@@ -33,7 +60,8 @@ export default function ContactForm({ dict }: { dict: Dictionary }) {
 
       if (response.ok) {
         setStatus('Message sent successfully!');
-        setFormData({ name: '', phone: '', email: '', message: '' }); // Reset form
+        setFormData({ name: '', phone: '', email: '', message: '' });
+        setLastSubmissionTime(Date.now());
       } else {
         setStatus('Failed to send message.');
       }
@@ -66,7 +94,7 @@ export default function ContactForm({ dict }: { dict: Dictionary }) {
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-foreground mb-1">
-            {dict.contactForm.label.name}
+            {dict.contactForm.label.name} *
           </label>
           <Input
             id="name"
@@ -74,8 +102,9 @@ export default function ContactForm({ dict }: { dict: Dictionary }) {
             value={formData.name}
             onChange={handleChange}
             placeholder={dict.contactForm.placeholder.name}
-            required
+            className={errors.name ? 'border-red-500' : ''}
           />
+          {errors.name && <p className="text-sm text-red-500 mt-1">{errors.name}</p>}
         </div>
         <div className="grid grid-cols-2 gap-4">
           <div>
@@ -89,7 +118,7 @@ export default function ContactForm({ dict }: { dict: Dictionary }) {
               value={formData.phone}
               onChange={handleChange}
               placeholder={dict.contactForm.placeholder.phone}
-              required
+              className={errors.contact ? 'border-red-500' : ''}
             />
           </div>
           <div>
@@ -103,10 +132,13 @@ export default function ContactForm({ dict }: { dict: Dictionary }) {
               value={formData.email}
               onChange={handleChange}
               placeholder={dict.contactForm.placeholder.email}
-              required
+              className={errors.contact ? 'border-red-500' : ''}
             />
           </div>
         </div>
+        {errors.contact && (
+          <p className="text-sm text-red-500 mt-1">{errors.contact}</p>
+        )}
         <div>
           <label htmlFor="message" className="block text-sm font-medium text-foreground mb-1">
             {dict.contactForm.label.message}
@@ -121,6 +153,9 @@ export default function ContactForm({ dict }: { dict: Dictionary }) {
             required
           />
         </div>
+        {errors.rateLimit && (
+          <p className="text-sm text-red-500">{errors.rateLimit}</p>
+        )}
         {status && (
           <div className={`text-sm ${status.includes('success') ? 'text-green-600' : 'text-red-600'}`}>
             {status}
