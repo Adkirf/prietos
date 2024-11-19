@@ -222,6 +222,11 @@
       "email": "Tu Correo Electrónico",
       "message": "Tu Mensaje",
       "phone": "Tu Número de Teléfono"
+    },
+    "validation": {
+      "nameRequired": "Nombre es requerido",
+      "contactRequired": "Ingrese su correo electrónico o número de teléfono",
+      "tooManyRequests": "Espere 10 segundos antes de enviar nuevamente"
     }
   },
   "privacy": {

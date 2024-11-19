@@ -17,23 +17,20 @@ export async function POST(req: NextRequest) {
 
         // Create transporter with more detailed configuration
         const transporter = nodemailer.createTransport({
-            host: 'smtp.gmail.com',
+            host: 'smtp.simply.com',
             port: 587,
-            secure: false, // true for 465, false for other ports
+            secure: false, // Use STARTTLS
             auth: {
                 user: process.env.EMAIL_USER,
                 pass: process.env.EMAIL_PASS,
-            },
-            tls: {
-                rejectUnauthorized: false // Only during development
             }
         });
 
         const mailOptions = {
-            from: `"Contact Form" <${process.env.EMAIL_USER}>`, // This format is more reliable
+            from: `"Contacto" <${process.env.EMAIL_USER}>`, // This format is more reliable
             replyTo: email, // The actual sender's email for replies
             to: process.env.EMAIL_RECEIVER,
-            subject: `Contact Form Submission from ${name}`,
+            subject: `Has sido contactado por ${name}`,
             text: `
 Name: ${name}
 Phone: ${phone}
@@ -41,7 +38,7 @@ Email: ${email}
 Message: ${message}
             `,
             html: `
-<h2>New Contact Form Submission</h2>
+<h2>Nuevo Mensaje de</h2>
 <p><strong>Name:</strong> ${name}</p>
 <p><strong>Phone:</strong> ${phone}</p>
 <p><strong>Email:</strong> ${email}</p>
@@ -86,11 +83,11 @@ Message: ${message}
         const transporter = nodemailer.createTransport({
             host: 'smtp.simply.com',
             port: 587,
-            secure: false, // Use TLS (STARTTLS)
+            secure: false, // Use STARTTLS
             auth: {
                 user: process.env.EMAIL_USER,
                 pass: process.env.EMAIL_PASS,
-            },
+            }
         });
 
         const mailOptions = {

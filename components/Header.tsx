@@ -7,7 +7,6 @@ import { Menu } from 'lucide-react'
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
 import LanguageSwitcher from './LanguageSwitcher'
-import { ThemeToggle } from './context/ThemeToggle'
 import { useFont } from './context/FontProvider'
 
 //Assets
@@ -51,9 +50,6 @@ export default function Header({ dict, lang }: { dict: Dictionary, lang: string 
                                 <li>
                                     <LanguageSwitcher currentLang={lang} />
                                 </li>
-                                <li>
-                                    <ThemeToggle />
-                                </li>
                             </ul>
                         </nav>
                     </SheetContent>
@@ -83,7 +79,6 @@ export default function Header({ dict, lang }: { dict: Dictionary, lang: string 
                         ))}
                     </ul>
                     <LanguageSwitcher currentLang={lang} />
-                    <ThemeToggle />
                 </nav>
             </div>
         </header>

@@ -229,6 +229,11 @@
       "email": "Din e-post",
       "message": "Ditt meddelande",
       "phone": "Ditt telefonnummer"
+    },
+    "validation": {
+      "nameRequired": "Namn är obligatoriskt",
+      "contactRequired": "Ange antingen e-post eller telefonnummer",
+      "tooManyRequests": "Vänta 10 sekunder innan du skickar igen"
     }
   },
   "privacy": {

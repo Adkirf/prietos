@@ -223,6 +223,11 @@
       "email": "Your Email",
       "message": "Your Message",
       "phone": "Your Phone Number"
+    },
+    "validation": {
+      "nameRequired": "Name is required",
+      "contactRequired": "Either email or phone number is required",
+      "tooManyRequests": "Please wait 10 seconds before submitting again"
     }
   },
   "privacy": {
