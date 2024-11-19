@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Separator } from "@/components/ui/separator"
 import { Mail, Phone } from "lucide-react"
 import { Dictionary } from '@/app/[lang]/dictionaries'
-import { useState, useEffect } from "react"
+import { useState } from "react"
 
 export default function ContactForm({ dict }: { dict: Dictionary }) {
 

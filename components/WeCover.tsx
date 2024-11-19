@@ -66,9 +66,14 @@ export function WeCover({ dict }: { dict: Dictionary }) {
                                 </div>
                             </div>
                         </div>
-                        <button className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">
+                        <a
+                            href="https://calendly.com/kontakt-prietoskompaniet/prietos-consultation"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                        >
                             {dict.CTA.bookConsultation}
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
