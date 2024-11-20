@@ -11,6 +11,16 @@
     "title": "Våra projekt",
     "list": [
       {
+        "title": "Västertorpsvägen / Bromma",
+        "images": [
+          {
+            "src": "/assets/project4/1.jpg",
+            "width": 800,
+            "height": 600
+          }
+        ]
+      },
+      {
         "title": "Sällskapsvägen / Stora Essingen",
         "images": [
           {
@@ -201,7 +211,7 @@
       }
     ],
     "descriptions": [
-      "Prietos Company började som en vision - att skapa något överlägset genom många års erfarenhet, förstärkt med disciplin och hårt arbete.",
+      "Prietos Kompaniet började som en vision - att skapa något överlägset genom många års erfarenhet, förstärkt med disciplin och hårt arbete.",
       "Det startades av en person och idag har vi stöd från flera mycket kompetenta arbetare på renoveringsmarknaden. Det är ett företag som är mycket stött av miljön genom att tillverka renoveringsprodukter med produkter som är godkända av arbetsmiljön.",
       "Vi anser att din plånbok och vår gemensamma miljö måste behandlas på samma sätt - på ett hållbart sätt",
       "Du berättar vad du behöver, så tar vi hand om allt annat - Vi garanterar bästa kvalitet!"

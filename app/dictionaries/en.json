@@ -11,6 +11,16 @@
     "title": "Our Projects",
     "list": [
       {
+        "title": "Västertorpsvägen / Bromma",
+        "images": [
+          {
+            "src": "/assets/project4/1.jpg",
+            "width": 800,
+            "height": 600
+          }
+        ]
+      },
+      {
         "title": "Sällskapsvägen / Stora Essingen",
         "images": [
           {
@@ -195,7 +205,7 @@
       }
     ],
     "descriptions": [
-      "Prietos Company began as a vision - to create something superior through years of experience, reinforced with discipline and hard work.",
+      "Prietos Kompaniet began as a vision - to create something superior through years of experience, reinforced with discipline and hard work.",
       "What started as a one-man business became a team of skilled professionals who all share the same commitment to high-quality.",
       "We believe that your wallet and our shared environment must be treated the same way - sustainably",
       "You tell us what you need, and we'll take care of everything else - We guarantee the best quality!"

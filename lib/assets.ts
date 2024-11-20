@@ -62,97 +62,110 @@ const about4 = {
 import project1_1Src from '/public/assets/project1.1.jpg'
 const project1_1 = {
     src: project1_1Src,
-    alt: "Project 1 Image 1",
-    height: 600,
-    width: 450
+    alt: "Project 1 Image 1"
 }
 
 import project1_2Src from '/public/assets/project1.2.jpg'
 const project1_2 = {
     src: project1_2Src,
-    alt: "Project 1 Image 2",
-    height: 450,
-    width: 600
+    alt: "Project 1 Image 2"
 }
 
 import project1_3Src from '/public/assets/project1.3.jpg'
 const project1_3 = {
     src: project1_3Src,
-    alt: "Project 1 Image 3",
-    height: 500,
-    width: 500
+    alt: "Project 1 Image 3"
 }
 
 import project1_4Src from '/public/assets/project1.4.jpg'
 const project1_4 = {
     src: project1_4Src,
-    alt: "Project 1 Image 4",
-    height: 550,
-    width: 450
+    alt: "Project 1 Image 4"
 }
 
 import project1_5Src from '/public/assets/project1.5.jpg'
 const project1_5 = {
     src: project1_5Src,
-    alt: "Project 1 Image 5",
-    height: 450,
-    width: 550
+    alt: "Project 1 Image 5"
 }
 
 import project2_1Src from '/public/assets/project2.1.jpg'
 const project2_1 = {
     src: project2_1Src,
-    alt: "Project 2 Image 1",
-    height: 600,
-    width: 400
+    alt: "Project 2 Image 1"
 }
 
 import project2_2Src from '/public/assets/project2.2.jpg'
 const project2_2 = {
     src: project2_2Src,
-    alt: "Project 2 Image 2",
-    height: 400,
-    width: 600
+    alt: "Project 2 Image 2"
 }
 
 import project2_3Src from '/public/assets/project2.3.jpg'
 const project2_3 = {
     src: project2_3Src,
-    alt: "Project 2 Image 3",
-    height: 500,
-    width: 450
+    alt: "Project 2 Image 3"
 }
 
 import project2_4Src from '/public/assets/project2.4.jpg'
 const project2_4 = {
     src: project2_4Src,
-    alt: "Project 2 Image 4",
-    height: 450,
-    width: 500
+    alt: "Project 2 Image 4"
 }
 
 import project3_1Src from '/public/assets/project3.1.jpg'
 const project3_1 = {
     src: project3_1Src,
-    alt: "Project 3 Image 1",
-    height: 550,
-    width: 500
+    alt: "Project 3 Image 1"
 }
 
 import project3_2Src from '/public/assets/project3.2.jpg'
 const project3_2 = {
     src: project3_2Src,
-    alt: "Project 3 Image 2",
-    height: 500,
-    width: 550
+    alt: "Project 3 Image 2"
 }
 
 import project3_3Src from '/public/assets/project3.3.jpg'
 const project3_3 = {
     src: project3_3Src,
-    alt: "Project 3 Image 3",
-    height: 450,
-    width: 450
+    alt: "Project 3 Image 3"
+}
+
+import project4_1Src from '/public/assets/project4.1.jpg'
+const project4_1 = {
+    src: project4_1Src,
+    alt: "Project 4 Image 1"
+}
+
+import project4_2Src from '/public/assets/project4.2.jpg'
+const project4_2 = {
+    src: project4_2Src,
+    alt: "Project 4 Image 2"
+}
+import project4_3Src from '/public/assets/project4.3.jpg'
+const project4_3 = {
+    src: project4_3Src,
+    alt: "Project 4 Image 3"
+}
+import project4_4Src from '/public/assets/project4.4.jpg'
+const project4_4 = {
+    src: project4_4Src,
+    alt: "Project 4 Image 4"
+}
+import project4_5Src from '/public/assets/project4.5.jpg'
+const project4_5 = {
+    src: project4_5Src,
+    alt: "Project 4 Image 5"
+}
+import project4_6Src from '/public/assets/project4.6.jpg'
+const project4_6 = {
+    src: project4_6Src,
+    alt: "Project 4 Image 6"
+}
+import project4_7Src from '/public/assets/project4.7.jpg'
+const project4_7 = {
+    src: project4_7Src,
+    alt: "Project 4 Image 7"
 }
 
 
@@ -180,4 +193,11 @@ export {
     project3_1,
     project3_2,
     project3_3,
+    project4_1,
+    project4_2,
+    project4_3,
+    project4_4,
+    project4_5,
+    project4_6,
+    project4_7,
 }
