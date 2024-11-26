@@ -4,55 +4,55 @@ import { useState, useEffect, useCallback } from 'react'
 import Image from 'next/image'
 import { Dictionary } from '@/app/[lang]/dictionaries'
 import { useFont } from './context/FontProvider'
-import { project4_1, project4_2, project4_3, project4_4, project4_5, project4_6, project4_7 } from '@/lib/assets'
+import { project4_1, project4_2, project4_3, project4_4, project4_5, project4_6 } from '@/lib/assets'
 
 export default function FlipCubeImages({ dict }: { dict: Dictionary }) {
-    const [currentFace, setCurrentFace] = useState(0)
-    const [lastInteraction, setLastInteraction] = useState(Date.now())
-    const faces = ['front', 'right', 'back', 'left', 'top', 'bottom']
-    const images = [
-        project4_1.src,
-        project4_2.src,
-        project4_3.src,
-        project4_4.src,
-        project4_5.src,
-        project4_6.src,
-    ]
+  const [currentFace, setCurrentFace] = useState(0)
+  const [lastInteraction, setLastInteraction] = useState(Date.now())
+  const faces = ['front', 'right', 'back', 'left', 'top', 'bottom']
+  const images = [
+    project4_1.src,
+    project4_2.src,
+    project4_3.src,
+    project4_4.src,
+    project4_5.src,
+    project4_6.src,
+  ]
 
-    const { font } = useFont();
+  const { font } = useFont();
 
-    const getActiveFace = useCallback((currentFace: number) => {
-        switch (currentFace) {
-            case 0: return 'front';
-            case 1: return 'right';
-            case 2: return 'back';
-            case 3: return 'left';
-            case 4: return 'bottom';
-            case 5: return 'top';
-            default: return 'front';
-        }
-    }, []);
+  const getActiveFace = useCallback((currentFace: number) => {
+    switch (currentFace) {
+      case 0: return 'front';
+      case 1: return 'right';
+      case 2: return 'back';
+      case 3: return 'left';
+      case 4: return 'bottom';
+      case 5: return 'top';
+      default: return 'front';
+    }
+  }, []);
 
-    const handleRotate = useCallback(() => {
-        setCurrentFace((prev) => (prev + 1) % faces.length)
-        setLastInteraction(Date.now())
-    }, [faces.length])
+  const handleRotate = useCallback(() => {
+    setCurrentFace((prev) => (prev + 1) % faces.length)
+    setLastInteraction(Date.now())
+  }, [faces.length])
 
-    // Auto-rotation effect
-    useEffect(() => {
-        const autoRotationInterval = setInterval(() => {
-            const now = Date.now()
-            if (now - lastInteraction >= 4000) { // 4 seconds
-                handleRotate()
-            }
-        }, 4000)
+  // Auto-rotation effect
+  useEffect(() => {
+    const autoRotationInterval = setInterval(() => {
+      const now = Date.now()
+      if (now - lastInteraction >= 4000) { // 4 seconds
+        handleRotate()
+      }
+    }, 4000)
 
-        return () => clearInterval(autoRotationInterval)
-    }, [lastInteraction, handleRotate])
+    return () => clearInterval(autoRotationInterval)
+  }, [lastInteraction, handleRotate])
 
-    return (
-        <section className={`flex ${font} min-h-[88vh] flex-col items-center justify-center gap-8 ${font.className}`}>
-            <style jsx>{`
+  return (
+    <section className={`flex ${font} min-h-[88vh] flex-col items-center justify-center gap-8 ${font.className}`}>
+      <style jsx>{`
         .cube-container {
           perspective: 1000px;
           width: 250px;
@@ -138,30 +138,30 @@ export default function FlipCubeImages({ dict }: { dict: Dictionary }) {
           .face.bottom { transform: rotateX(-90deg) translateZ(150px); }
         }
       `}</style>
-            <h1 className='mb-2'>
-                {dict.whatWeDo.title}
-            </h1>
-            <div
-                className="cube-container"
-                onClick={handleRotate}
-                onMouseMove={() => setLastInteraction(Date.now())}
-                onTouchStart={() => setLastInteraction(Date.now())}
-            >
-                <div className={`cube show-${faces[currentFace]}`}>
-                    {faces.map((face, index) => (
-                        <div key={face} className={`face ${face} ${face === getActiveFace(currentFace) ? 'active' : ''}`}>
-                            <Image
-                                src={images[index]}
-                                alt={`Cube face ${face}`}
-                                fill
-                                priority
-                                sizes="(max-width: 768px) 250px, (max-width: 1024px) 280px, 300px"
-                                style={{ objectFit: 'cover' }}
-                            />
-                        </div>
-                    ))}
-                </div>
+      <h1 className='mb-2'>
+        {dict.whatWeDo.title}
+      </h1>
+      <div
+        className="cube-container"
+        onClick={handleRotate}
+        onMouseMove={() => setLastInteraction(Date.now())}
+        onTouchStart={() => setLastInteraction(Date.now())}
+      >
+        <div className={`cube show-${faces[currentFace]}`}>
+          {faces.map((face, index) => (
+            <div key={face} className={`face ${face} ${face === getActiveFace(currentFace) ? 'active' : ''}`}>
+              <Image
+                src={images[index]}
+                alt={`Cube face ${face}`}
+                fill
+                priority
+                sizes="(max-width: 768px) 250px, (max-width: 1024px) 280px, 300px"
+                style={{ objectFit: 'cover' }}
+              />
             </div>
-        </section>
-    )
+          ))}
+        </div>
+      </div>
+    </section>
+  )
 } 
