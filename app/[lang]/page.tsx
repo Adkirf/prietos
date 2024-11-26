@@ -5,7 +5,7 @@ import { InformationBoxes } from "@/components/InformationBoxes"
 import { WeCover } from "@/components/WeCover"
 import { OurSerivce } from "@/components/OurService"
 import { CTAButton } from "@/components/CTAButton"
-import FlipCubeShort from "@/components/FlipCupeShort"
+import FlipCubeShort from "@/components/FlipCubeImages"
 
 export default async function Home({
     params: { lang },
