@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from 'react'
 import Image from 'next/image'
 import { Dictionary } from '@/app/[lang]/dictionaries'
 import { useFont } from './context/FontProvider'
-import { project4_1, project4_2, project4_3, project4_4, project4_5, project4_6 } from '@/lib/assets'
+import { project4_1, project4_2, project4_3, project4_4 } from '@/lib/assets'
 
 export default function FlipCubeImages({ dict }: { dict: Dictionary }) {
   const [currentFace, setCurrentFace] = useState(0)
@@ -15,8 +15,6 @@ export default function FlipCubeImages({ dict }: { dict: Dictionary }) {
     project4_2.src,
     project4_3.src,
     project4_4.src,
-    project4_5.src,
-    project4_6.src,
   ]
 
   const { font } = useFont();
