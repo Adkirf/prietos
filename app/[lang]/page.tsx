@@ -5,7 +5,7 @@ import { InformationBoxes } from "@/components/InformationBoxes"
 import { WeCover } from "@/components/WeCover"
 import { OurSerivce } from "@/components/OurService"
 import { CTAButton } from "@/components/CTAButton"
-import FlipCubeShort from "@/components/FlipCubeImages"
+import FlipCube from "@/components/FlipCupe"
 
 export default async function Home({
     params: { lang },
@@ -19,7 +19,7 @@ export default async function Home({
             <Hero dict={dict} />
             <ImageComparison dict={dict} />
             <InformationBoxes dict={dict} />
-            <FlipCubeShort dict={dict} />
+            <FlipCube dict={dict} />
             <WeCover dict={dict} />
             <OurSerivce dict={dict} />
             <CTAButton dict={dict} lang={lang} />
