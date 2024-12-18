@@ -81,11 +81,11 @@ export default function ContactForm({ dict }: { dict: Dictionary }) {
         <div className="space-y-2">
           <p className="flex items-center justify-center text-sm text-foreground">
             <Mail className="mr-2 h-4 w-4" />
-            <a href="mailto:info@prietos.se" className="text-primary hover:underline">info@prietos.se</a>
+            <a href={`mailto:${dict.footer.email}`} className="text-primary hover:underline">{dict.footer.email}</a>
           </p>
           <p className="flex items-center justify-center text-sm text-foreground">
             <Phone className="mr-2 h-4 w-4" />
-            <a href="tel:+46123456789" className="text-primary hover:underline">+46 123 456 789</a>
+            <a href={`tel:${dict.footer.phone}`} className="text-primary hover:underline">{dict.footer.phone}</a>
           </p>
           <p className="text-sm text-muted-foreground mb-4">{dict.contactForm.or}</p>
           <Separator className="my-4" />
