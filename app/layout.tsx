@@ -14,10 +14,12 @@ export default function Root({ children, params }: { children: React.ReactNode, 
   return (
     <html lang={params.lang} suppressHydrationWarning>
       <head>
-        <link rel="icon" href="favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-        <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta name="theme-color" content="#ffffff" />
       </head>
       <body className="min-h-screen bg-background antialiased">
