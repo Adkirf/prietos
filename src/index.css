@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+
+:root {
+  --color-primary: #846747;
+  --color-secondary: #121216;
+  --color-accent: #E0BD8F;
+  --color-muted: #46464C;
+  --color-background: #1B1B20;
+  --color-text: #d9d9d9;
+  --radius-main: 8px;
+  --radius-section: 6px;
+}
+
+body {
+  @apply bg-black  font-sans;
+  font-family: 'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', sans-serif;
+  color: var(--color-text); 
+  width: 100%;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+* {
+  box-sizing: border-box;
+}
+
+section {
+  @apply w-full px-2 py-[15vh] md:py-[20vh] lg:py-[25vh];
+}
+
+.card {
+  @apply p-5;
+  background-color: var(--color-background);
+  border-radius: var(--radius-main);
+}
+
+
+.button-primary {
+  @apply text-white px-6 py-2 font-semibold transition;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-main);
+}
+.button-primary:hover {
+  background-color: #6e5637;
+}
+
+.input {
+  @apply border-b-2 bg-transparent text-white py-3 outline-none w-full;
+  border-color: white;
+}
+
+.divider {
+  @apply w-full h-[1px] my-6 md:my-10;
+  background-color: var(--color-muted);
+}
+
+
+h2{
+  @apply text-[20px] md:text-[25px] lg:text-[32px] font-[300];
+  letter-spacing: 0.01em;
+}
+
+h3{
+  @apply text-[16px] md:text-[17px] lg:text-[22px] font-[300];
+  letter-spacing: 0.01em;
+}
+h4{
+  @apply text-[12px] md:text-[17px] lg:text-[18px] font-[300];
+  letter-spacing: 0.01em;
+}
+
+
+.text-thin {
+  @apply text-[13px] md:text-[15px] lg:text-[16px] font-[100];
+  letter-spacing: 0.01em;
+}
+.text-regular {
+  @apply text-[15px] md:text-[17px] lg:text-[18px] font-[300];
+  letter-spacing: 0.01em;
+}
+.text-bold {
+  @apply text-[15px] md:text-[17px] lg:text-[18px] font-[700];
+  letter-spacing: 0.01em;
+}
+
+.text-primary{
+  color: var(--color-primary);
+}
+
+.text-image {
+  background-image: url('../public/assets/images/bg.jpg');
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.header-bg {
+  background: rgba(0, 0,0, 0.85); /* semi-transparent, matches --color-secondary */
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: .5px solid var(--color-primary); /* thin golden line */
+
+}
+
+/* Flip Card 3D Styles */
+.flip-card-container {
+  perspective: 2000px;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.flip-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+}
+.flip-card-face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  will-change: transform;
+}
+.flip-card-face.back {
+  /* transform: rotateY(180deg); */
+}
+.flip-card-face-vertical {
+  transform: rotateX(180deg);
+}
+
+/* VideoGrid fade overlays */
+.video-grid-fade {
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  z-index: 2;
+}
+.video-grid-fade-top {
+  top: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.95), transparent);
+}
+.video-grid-fade-bottom {
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.95), transparent);
+}
+@media (min-width: 768px) {
+  .video-grid-fade { height: 64px; }
+}
