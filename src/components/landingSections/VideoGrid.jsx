@@ -163,7 +163,7 @@ function ScrollingColumn({
         style={{
           y,
           position: "absolute",
-          top: "-50%",
+          top: "-75%",
           left: 0,
           width: "100%",
           transform: "translateY(-50%)",
