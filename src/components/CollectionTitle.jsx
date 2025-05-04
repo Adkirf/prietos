@@ -1,6 +1,5 @@
 import React from "react";
 import tree_logo from "../../public/assets/banners/tree_logo.svg";
-import excsuccess from "../../public/assets/images/exc-success.png";
 
 export default function CollectionTitle() {
   return (
@@ -9,7 +8,7 @@ export default function CollectionTitle() {
         <img
           src={tree_logo}
           alt="tree"
-          className="max-w-[41px] max-h-[34px] md:max-w-[110px] md:max-h-[92px] mb-7"
+          className="max-w-[4.2rem] max-h-[3.5rem] md:max-w-[6.875rem] md:max-h-[5.75rem] mb-[1.75rem]"
         />
       </div>
       <h3 className="text-image">Exclussive Success.</h3>

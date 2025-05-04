@@ -1,6 +1,4 @@
 import React from "react";
-import sub_des_desk from "../../public/assets/images/sub_des_desk.png";
-import right_arrow from "../../public/assets/images/right_arrow.svg";
 import tree_logo from "../../public/assets/banners/tree_logo.svg";
 import { ArrowRight } from "lucide-react";
 

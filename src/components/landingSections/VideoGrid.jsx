@@ -100,7 +100,7 @@ function VideoCard({
       <img
         src={src}
         alt={`img-${colIdx}-${index}`}
-        className="w-full h-[188px] md:h-auto rounded object-cover"
+        className="w-full rounded object-cover"
       />
     </motion.figure>
   );
@@ -126,13 +126,14 @@ function ScrollingColumn({
   const ref = useRef(null);
   const { scrollY } = useScroll();
   // Drift slower for subtle effect
-  const drift = direction * 0.08;
+  const drift = direction * 0.2;
   const y = useTransform(scrollY, (value) =>
     hasAnimated && !reduceMotion ? value * drift : 0
   );
 
-  // Duplicate images for looping effect
-  const loopedImages = [...images, ...images];
+  // Repeat images enough times to always fill the column, even with drift
+  const REPEAT_COUNT = 5; // Adjust as needed for your drift range and column height
+  const repeatedImages = Array(REPEAT_COUNT).fill(images).flat();
 
   // Track which card is active (tapped) for mobile
   const [activeIndex, setActiveIndex] = React.useState(null);
@@ -153,31 +154,43 @@ function ScrollingColumn({
   }, []);
 
   return (
-    <motion.div
-      style={{ y, overflow: "hidden" }}
-      className="flex flex-col gap-1 md:gap-4"
+    <div
       ref={ref}
+      className="relative w-full h-full flex flex-col gap-1 md:gap-4 overflow-hidden"
+      style={{ minHeight: 0 }}
     >
-      {loopedImages.map((src, index) => (
-        <VideoCard
-          key={index}
-          src={src.src}
-          titleImage={src.titleImage}
-          name={src.name}
-          desc={src.desc}
-          direction={direction}
-          index={index}
-          reduceMotion={reduceMotion}
-          colIdx={colIdx}
-          hasAnimated={hasAnimated}
-          isActive={activeIndex === index}
-          onTouch={(e) => {
-            e.stopPropagation();
-            setActiveIndex(activeIndex === index ? null : index);
-          }}
-        />
-      ))}
-    </motion.div>
+      <motion.div
+        style={{
+          y,
+          position: "absolute",
+          top: "-50%",
+          left: 0,
+          width: "100%",
+          transform: "translateY(-50%)",
+        }}
+        className="flex flex-col gap-1 md:gap-4 w-full"
+      >
+        {repeatedImages.map((src, index) => (
+          <VideoCard
+            key={index}
+            src={src.src}
+            titleImage={src.titleImage}
+            name={src.name}
+            desc={src.desc}
+            direction={direction}
+            index={index}
+            reduceMotion={reduceMotion}
+            colIdx={colIdx}
+            hasAnimated={hasAnimated}
+            isActive={activeIndex === index}
+            onTouch={(e) => {
+              e.stopPropagation();
+              setActiveIndex(activeIndex === index ? null : index);
+            }}
+          />
+        ))}
+      </motion.div>
+    </div>
   );
 }
 
@@ -316,27 +329,22 @@ export default function VideoGrid() {
   const columns = splitIntoColumns(imagesSecgrid, numCols);
 
   return (
-    <section className="flex flex-col">
+    <section className="flex flex-col gap-12">
       <h2 className="ml-4">
         Inspired by <span className="text-image">Success.</span>
       </h2>
-      <div
-        ref={ref}
-        className=" w-full flex gap-2 md:gap-4 pt-5 md:pt-[180px] px-2"
-      >
+      <div ref={ref} className=" w-full flex gap-2 md:gap-4  px-2 relative">
+        {!reduceMotion && (
+          <>
+            <div className="video-grid-fade video-grid-fade-top" />
+            <div className="video-grid-fade video-grid-fade-bottom" />
+          </>
+        )}
         {columns.map((colImages, colIdx) => (
           <div
             key={colIdx}
             className="flex-1 min-w-0 relative h-[150vh] overflow-hidden"
           >
-            {/* Top Fade */}
-            {!reduceMotion && (
-              <div className="video-grid-fade video-grid-fade-top" />
-            )}
-            {/* Bottom Fade */}
-            {!reduceMotion && (
-              <div className="video-grid-fade video-grid-fade-bottom" />
-            )}
             <ScrollingColumn
               images={colImages}
               direction={colIdx % 2 === 0 ? -1 : 1}

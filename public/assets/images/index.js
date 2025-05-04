@@ -1,7 +1,7 @@
 // images
 export { default as img_1 } from "./img_1.png";
 export { default as img_2 } from "./img_2.png";
-export { default as img_3 } from "./imge_3.png";
+export { default as img_3 } from "./img_3.png";
 
 // logo
 export { default as logo } from "./logo.png";
@@ -10,10 +10,6 @@ export { default as cen_logo } from "./cen_logo.png";
 // text
 
 export { default as cloths } from "./cloths.png";
-export { default as excsuccess } from "./exc-success.png";
-export { default as inspiredtext } from "./inspired-text.png";
-export { default as subTest } from "./subTest.png";
-export { default as sub_des_desk } from "./sub_des_desk.png";
 export { default as football_text } from "./football_text.png";
 
 // grid
@@ -36,9 +32,6 @@ export { default as g12 } from "./g12.png";
 export { default as g13 } from "./g13.png";
 
 // icon
-
-export { default as right_arrow } from "./right_arrow.svg";
-export { default as chevron } from "./chevron-right.svg";
 export { default as card_tree } from "./card_tree.svg";
 
 // images title
@@ -52,3 +45,8 @@ export { default as follow_1 } from "./follow_1.svg";
 export { default as follow_2 } from "./follow_2.svg";
 export { default as follow_3 } from "./follow_3.svg";
 export { default as follow_4 } from "./follow_4.svg";
+
+// languges
+export { default as englishFlag } from "./english-flag.png";
+export { default as swedishFlag } from "./swedish-flag.png";
+export { default as spanishFlag } from "./spanish-flag.png";

@@ -93,7 +93,7 @@ export default function ImageSlider() {
             <img
               src={item}
               alt={`img-${index}`}
-              className="w-[50vw] md:w-[33vw] rounded-[4px] object-contain"
+              className="w-full md:w-[33vw] rounded-[4px] object-contain"
             />
           </SwiperSlide>
         ))}
