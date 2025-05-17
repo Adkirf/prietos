@@ -50,3 +50,7 @@ export { default as follow_4 } from "./follow_4.svg";
 export { default as englishFlag } from "./english-flag.png";
 export { default as swedishFlag } from "./swedish-flag.png";
 export { default as spanishFlag } from "./spanish-flag.png";
+
+// vision
+export { deaufl as chair } from "./chair.png";
+f;

@@ -2,19 +2,24 @@ import React from "react";
 import football from "../../public/assets/banners/football.png";
 import mob_football from "../../public/assets/banners/mob_football.png";
 
-export default function FullScreenMedia() {
+const desktopSrc = football;
+const mobileSrc = mob_football;
+
+export default function FullScreenMedia({ desktopSrc, mobileSrc }) {
   return (
     <>
       <div className="w-full h-[100vh] pt-0  relative">
         <img
-          src={football}
+          src={desktopSrc}
           alt="img"
+          draggable={false}
           className="w-full h-full object-cover hidden md:block rounded-none"
         />
         <img
-          src={mob_football}
+          src={mobileSrc}
           alt="img"
-          className="w-full h-full block md:hidden"
+          draggable={false}
+          className="w-full h-full object-cover block md:hidden"
         />
       </div>
     </>

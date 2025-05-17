@@ -33,6 +33,7 @@ section {
   @apply p-5;
   background-color: var(--color-background);
   border-radius: var(--radius-main);
+  color: var(#9B9B9B)
 }
 
 
@@ -71,6 +72,7 @@ h4{
 }
 
 
+
 .text-thin {
   @apply text-[0.8125rem] md:text-[0.9375rem] lg:text-[1rem] font-[100];
   letter-spacing: 0.01em;
@@ -97,6 +99,17 @@ h4{
   background-position: center;
 }
 
+.text-gold{
+  color: var(--color-accent)
+}
+
+.bg-gold {
+  background-color: var(--color-accent);
+}
+
+.border-gold {
+  border-color: var(--color-accent);
+}
 
 .header-bg {
   background: rgba(0, 0,0, 0.85); /* semi-transparent, matches --color-secondary */

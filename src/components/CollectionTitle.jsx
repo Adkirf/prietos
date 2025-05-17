@@ -1,12 +1,13 @@
 import React from "react";
 import tree_logo from "../../public/assets/banners/tree_logo.svg";
+import icon from "../../public/icon.svg";
 
-export default function CollectionTitle() {
+export default function CollectionTitle({ isHome = false }) {
   return (
     <div className=" flex flex-col justify-center items-center">
       <div className="bg-black rounded-full p-2">
         <img
-          src={tree_logo}
+          src={isHome ? icon : tree_logo}
           alt="tree"
           className="max-w-[4.2rem] max-h-[3.5rem] md:max-w-[6.875rem] md:max-h-[5.75rem] mb-[1.75rem]"
         />

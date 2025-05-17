@@ -3,11 +3,13 @@ import logo from "../../public/assets/images/logo.png";
 import UnderlineText from "./Underline";
 import { Sheet, SheetTrigger, SheetContent, SheetTitle } from "./ui/sheet";
 import { Menu } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [hovered, setHovered] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,10 +19,10 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Menu items for mobile
+  // Menu items for mobile and desktop
   const menuItems = [
-    { label: "Exclussive Success.", href: "#" },
-    { label: "Access", href: "#access" },
+    { label: "Exclussive Success.", to: "/exclusive-access" },
+    { label: "Access", to: "/" },
   ];
 
   return (
@@ -32,18 +34,38 @@ export default function Header() {
       onMouseLeave={() => setHovered(false)}
     >
       {/* Logo */}
-      <div className="flex items-center justify-start w-auto md:w-1/3">
-        <img src={logo} alt="logo" className="h-8 md:h-10 " />
+      <div className="flex items-center justify-start w-auto md:w-1/3 ">
+        <Link to="/">
+          <img src={logo} alt="logo" className="h-8 md:h-10 cursor-pointer" />
+        </Link>
       </div>
       {/* Center title (desktop only) */}
-      <div className="hidden md:flex items-center justify-center w-auto md:w-1/3">
-        <UnderlineText>
-          <p className="">Exclussive Success.</p>
-        </UnderlineText>
+      <div className="hidden md:flex items-center justify-center w-auto md:w-1/3 ">
+        <Link
+          to={"/exclusive-access"}
+          className="transition-colors duration-300 block cursor-pointer"
+        >
+          <p
+            className={`${
+              location.pathname === "/exclusive-access" ? "image-underline" : ""
+            }`}
+          >
+            Exclussive Success.
+          </p>
+        </Link>
       </div>
       {/* Access (desktop only) */}
       <div className="hidden md:flex items-center justify-end w-auto md:w-1/3">
-        <p className="">Access</p>
+        <Link
+          to={"/"}
+          className="transition-colors duration-300 block cursor-pointer"
+        >
+          <p
+            className={`${location.pathname === "/" ? "image-underline" : ""}`}
+          >
+            Access
+          </p>
+        </Link>
       </div>
       {/* Mobile menu button */}
       <div className="md:hidden flex items-center mr-2">
@@ -65,17 +87,19 @@ export default function Header() {
               <ul className="flex flex-col space-y-0 mt-0 divide-y divide-[#46464C]">
                 {menuItems.map((item, idx) => (
                   <li key={item.label} className="py-4 first:pt-0 last:pb-0">
-                    <a
-                      href={item.href}
-                      className=" transition-colors duration-300 block"
+                    <Link
+                      to={item.to}
+                      className="transition-colors duration-300 block cursor-pointer"
                       onClick={() => setIsOpen(false)}
                     >
-                      {item.label === "Exclussive Success." ? (
-                        <UnderlineText>{item.label}</UnderlineText>
-                      ) : (
-                        item.label
-                      )}
-                    </a>
+                      <p
+                        className={`${
+                          location.pathname === item.to ? "image-underline" : ""
+                        }`}
+                      >
+                        {item.label}
+                      </p>
+                    </Link>
                   </li>
                 ))}
               </ul>

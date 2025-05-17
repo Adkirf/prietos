@@ -1,59 +1,35 @@
 import React, { useState, useEffect } from "react";
-import Hero from "../../components/landingSections/Hero";
-import CollectionTitle from "../../components/CollectionTitle";
-import ImageSlider from "../../components/ImageSlider";
-import AccessTypes from "../../components/landingSections/AccessTypes";
-import { Subscribe } from "../../components/Subscribe";
-import VideoGrid from "../../components/landingSections/VideoGrid";
-import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import VideoSection from "../../components/landingSections/VideoSection";
+import OurOrigin from "../../components/home/OurOrigin";
+import FullScreenMedia from "../../components/FullScreenMedia";
+import CoreValues from "../../components/home/CoreValues";
+import DuoImage from "../../components/home/DuoImage";
+import Roadmap from "../../components/home/Roadmap";
+import Subscribe from "../../components/Subscribe";
+import Footer from "../../components/Footer";
 
-export default function Home() {
-  const [bounce, setBounce] = useState(false);
+import chair from "../../../public/assets/images/chair.png";
+import mani_bg from "../../../public/assets/banners/mani_bg.png";
 
-  useEffect(() => {
-    // Only trigger on mobile devices
-    if (window.innerWidth <= 768) {
-      setBounce(true);
-      const timer = setTimeout(() => setBounce(false), 2200); // match animation duration
-      return () => clearTimeout(timer);
-    }
-  }, []);
-
+export default function HomePage() {
   return (
-    <div
-      className={`relative w-full max-w-[1576px] mx-auto text-thin text-color-text`}
-    >
-      <div className="relative w-full max-w-[1576px] mx-auto">
-        <Header />
-        <Hero />
-        <div className="h-[100vh]"></div>
-        <div
-          className={`relative z-10 bg-black rounded-xl ${
-            bounce ? " bounce2" : ""
-          }`}
-        >
-          <div className="py-8 md:py-4 -translate-y-[33%]">
-            <CollectionTitle />
+    <>
+      <Header />
+      <div className={`relative w-full z-0  mx-auto text-thin text-color-text`}>
+        <div className="relative w-full   mx-auto">
+          <FullScreenMedia desktopSrc={mani_bg} mobileSrc={mani_bg} />
+
+          <OurOrigin />
+          <div className="py-[25vh]">
+            <FullScreenMedia desktopSrc={chair} mobileSrc={chair} />
           </div>
-          <ImageSlider />
-
-          <div className="py-[25vh] flex flex-col items-center ">
-            <h3 className="italic !text-[1.5em]">
-              Many dress like it.{" "}
-              <span className="text-image"> Just a few simply Are.</span>
-            </h3>
-          </div>
-          <VideoSection />
-
-          <VideoGrid />
-
-          <AccessTypes />
+          <CoreValues />
+          <DuoImage />
+          <Roadmap />
           <Subscribe />
           <Footer />
         </div>
       </div>
-    </div>
+    </>
   );
 }

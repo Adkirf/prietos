@@ -2,7 +2,7 @@ import React from "react";
 import tree_logo from "../../public/assets/banners/tree_logo.svg";
 import { ArrowRight } from "lucide-react";
 
-export function Subscribe() {
+export default function Subscribe() {
   return (
     <section className="flex flex-col">
       <div className="flex flex-col gap-4 md:gap-0 md:flex-row w-full ">
@@ -14,7 +14,7 @@ export function Subscribe() {
           />
         </div>
         <div className="w-full px-4 md:py-0 md:w-2/3 md:max-w-[60vw]">
-          <h2 className="">Subscribe now.</h2>
+          <h2 className="">Request access.</h2>
           <div className="relative">
             <ArrowRight className="absolute right-0 h-5 w-5 top-5" />
             <input
