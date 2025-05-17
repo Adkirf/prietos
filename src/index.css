@@ -33,7 +33,7 @@ section {
   @apply p-5;
   background-color: var(--color-background);
   border-radius: var(--radius-main);
-  color: var(#9B9B9B)
+  color: #9B9B9B
 }
 
 
