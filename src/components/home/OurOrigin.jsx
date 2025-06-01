@@ -1,5 +1,10 @@
-import { motion, useScroll, useTransform } from "framer-motion";
-import React, { useRef } from "react";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  useMotionValueEvent,
+} from "framer-motion";
+import React, { useRef, useEffect } from "react";
 import TreeComponent from "../../assets/TreeComponent";
 
 export default function OurOrigin() {
@@ -10,7 +15,17 @@ export default function OurOrigin() {
     offset: ["start start", "end end"],
   });
 
-  const treeOpacity = useTransform(scrollYProgress, [0, 0.6, 0.9], [1, 1, 0]);
+  const { scrollYProgress: treeScrollProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "start -220%"],
+  });
+
+  const treeOpacity = useTransform(treeScrollProgress, [0, 0.8, 1], [1, 1, 0]);
+  const treeHeight = useTransform(
+    treeScrollProgress,
+    [0, 0.8, 1],
+    [159, 350, 400]
+  );
 
   const p1Opacity = useTransform(
     scrollYProgress,
@@ -34,16 +49,16 @@ export default function OurOrigin() {
   return (
     <section
       ref={ref}
-      className="relative !px-0 w-full h-[300vh] flex my-12 flex-col justify-start items-center bg-black"
+      className="relative !px-0 w-full h-[300vh] flex flex-col justify-start items-center bg-black"
     >
-      <div className="h-[67vh] z-10 sticky top-[33vh] w-full flex justify-between overflow-hidden items-end">
-        <h2 className="ml-8 min-w-fit self-start">Origin.</h2>
+      <div className="h-[80vh] md:h-[67vh] z-10 sticky top-[20vh] md:top-[33vh] w-full flex justify-between overflow-hidden items-end">
+        <h2 className=" ml-8 min-w-fit self-start">Origin.</h2>
         <motion.div
           style={{
             opacity: treeOpacity,
           }}
         >
-          <TreeComponent className="" />
+          <TreeComponent height={treeHeight} />
         </motion.div>
       </div>
       {/* Animated Paragraphs */}

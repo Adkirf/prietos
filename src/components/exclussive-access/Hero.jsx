@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
-import mani_bg from "../../../public/assets/banners/mani_bg.png";
-import Header from "../Header";
 
-export default function Hero({ scrollToBottom }) {
+export default function Hero({ desktopSrc, mobileSrc }) {
   const [isScrolledPast, setIsScrolledPast] = useState(false);
 
   useEffect(() => {
@@ -24,7 +22,18 @@ export default function Hero({ scrollToBottom }) {
         style={{ background: isScrolledPast ? "black" : "none" }}
       >
         {!isScrolledPast && (
-          <img src={mani_bg} alt="bg" className="w-full h-full object-cover" />
+          <>
+            <img
+              src={desktopSrc}
+              alt="bg"
+              className="hidden md:block w-full h-full object-cover"
+            />
+            <img
+              src={mobileSrc}
+              alt="bg"
+              className="block md:hidden w-full h-full object-cover"
+            />
+          </>
         )}
       </div>
     </>

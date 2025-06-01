@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, use } from "react";
 import Hero from "../../components/exclussive-access/Hero";
 import CollectionTitle from "../../components/CollectionTitle";
 import ImageSlider from "../../components/ImageSlider";
@@ -9,8 +9,14 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import VideoSection from "../../components/exclussive-access/VideoSection";
 
+import mani_bg from "../../../public/assets/banners/mani_bg.png";
+
 export default function ExclusiveAccessPage() {
   const [bounce, setBounce] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     // Only trigger on mobile devices
@@ -26,14 +32,14 @@ export default function ExclusiveAccessPage() {
       <Header />
       <div className={`relative w-full mx-auto text-thin text-color-text`}>
         <div className="relative w-full  mx-auto">
-          <Hero />
+          <Hero desktopSrc={mani_bg} mobileSrc={mani_bg} />
           <div className="h-[100vh]"></div>
           <div
             className={`relative z-10 bg-black rounded-xl ${
               bounce ? " bounce2" : ""
             }`}
           >
-            <div className="py-8 md:py-4 -translate-y-[33%]">
+            <div className="py-8 md:py-4 -translate-y-[30%]">
               <CollectionTitle />
             </div>
             <ImageSlider />

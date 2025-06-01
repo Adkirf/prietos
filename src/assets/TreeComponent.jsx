@@ -1,16 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  useMotionValueEvent,
+} from "framer-motion";
 
 // You can add more props as needed (e.g., width, height, style)
 export default function TreeComponent({
-  className = "",
+  height = "159",
   color = "#DAA967",
   ...props
 }) {
+  const [currentHeight, setCurrentHeight] = useState(height?.get?.() || height);
+
+  if (height?.get?.()) {
+    useMotionValueEvent(height, "change", (latest) => {
+      setCurrentHeight(latest);
+    });
+  }
+
   return (
     <svg
       width="339"
-      height="159"
-      viewBox="0 0 339 159"
+      height={currentHeight}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >

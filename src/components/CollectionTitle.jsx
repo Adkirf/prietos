@@ -9,11 +9,15 @@ export default function CollectionTitle({ isHome = false }) {
         <img
           src={isHome ? icon : tree_logo}
           alt="tree"
-          className="max-w-[4.2rem] max-h-[3.5rem] md:max-w-[6.875rem] md:max-h-[5.75rem] mb-[1.75rem]"
+          className="max-w-[4.2rem] max-h-[3.5rem] md:max-w-[6.875rem] md:max-h-[5.75rem]  aspect-square object-contain"
         />
       </div>
-      <h3 className="text-image">Exclussive Success.</h3>
-      <h4 className="mb-0">A tribute to professionals around the globe.</h4>
+      {!isHome && (
+        <>
+          <h3 className="text-image mt-8">Exclussive Success.</h3>
+          <h4 className="mb-0">A tribute to professionals around the globe.</h4>
+        </>
+      )}
     </div>
   );
 }

@@ -53,7 +53,11 @@ export default function AccessTypes() {
 
   return (
     <section className="flex justify-between gap-2 flex-col lg:flex-row px-2">
-      <img src={cloths} alt="tree" className="mx-auto w-full lg:w-3/7 " />
+      <img
+        src={cloths}
+        alt="tree"
+        className="mx-auto w-full lg:w-3/7 object-cover"
+      />
       <div className="mx-auto w-full lg:w-4/7 flex flex-col gap-2 items-center">
         <div className="bg-[#846747] px-4 py-5 md:px-14 md:py-10 relative overflow-hidden w-full h-full rounded ">
           <Accordion>
