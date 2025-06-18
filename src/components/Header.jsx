@@ -21,8 +21,8 @@ export default function Header() {
 
   // Menu items for mobile and desktop
   const menuItems = [
-    { label: "Exclussive Success.", to: "/exclusive-access" },
-    { label: "Vision", to: "/" },
+    { label: "Exclussive Success.", to: "/" },
+    { label: "Vision", to: "/vision" },
   ];
 
   return (
