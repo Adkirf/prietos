@@ -22,7 +22,7 @@ export default function Header() {
   // Menu items for mobile and desktop
   const menuItems = [
     { label: "Exclussive Success.", to: "/exclusive-access" },
-    { label: "Access", to: "/" },
+    { label: "Vision", to: "/" },
   ];
 
   return (
@@ -40,7 +40,7 @@ export default function Header() {
         </Link>
       </div>
       {/* Center title (desktop only) */}
-      <div className="hidden md:flex items-center justify-center w-auto md:w-1/3 ">
+      {/*  <div className="hidden md:flex items-center justify-center w-auto md:w-1/3 ">
         <Link
           to={"/exclusive-access"}
           className="transition-colors duration-300 block cursor-pointer"
@@ -53,17 +53,17 @@ export default function Header() {
             Exclussive Success.
           </p>
         </Link>
-      </div>
+      </div> */}
       {/* Access (desktop only) */}
       <div className="hidden md:flex items-center justify-end w-auto md:w-1/3">
         <Link
-          to={"/"}
+          to={"/vision"}
           className="transition-colors duration-300 block cursor-pointer"
         >
           <p
-            className={`${location.pathname === "/" ? "image-underline" : ""}`}
+            className={`${location.pathname === "/" ? "" : "image-underline"}`}
           >
-            Access
+            Vision
           </p>
         </Link>
       </div>

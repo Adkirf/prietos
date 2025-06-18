@@ -4,12 +4,10 @@ export { default as img_2 } from "./img_2.png";
 export { default as img_3 } from "./img_3.png";
 
 // text
-
 export { default as cloths } from "./cloths.png";
 export { default as football_text } from "./football_text.png";
 
 // grid
-
 export { default as g1 } from "./g1.png";
 export { default as gg2 } from "./gg2.png";
 export { default as g2 } from "./g2.png";
@@ -31,12 +29,10 @@ export { default as g13 } from "./g13.png";
 export { default as card_tree } from "./card_tree.svg";
 
 // images title
-
 export { default as top_title } from "./top_title.png";
 export { default as top_title2 } from "./title_top2.png";
 
 // follows
-
 export { default as follow_1 } from "./follow_1.svg";
 export { default as follow_2 } from "./follow_2.svg";
 export { default as follow_3 } from "./follow_3.svg";
@@ -49,6 +45,5 @@ export { default as spanishFlag } from "./spanish-flag.png";
 
 // vision
 export { deaufl as chair } from "./chair.png";
-f;
 
 //

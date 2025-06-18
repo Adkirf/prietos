@@ -1,17 +1,14 @@
-import React, { useState, useEffect } from "react";
-import Header from "../../components/Header";
-import Hero from "../../components/exclussive-access/Hero";
-
-import OurOrigin from "../../components/home/OurOrigin";
-import FullScreenMedia from "../../components/FullScreenMedia";
-import CoreValues from "../../components/home/CoreValues";
-import DuoImage from "../../components/home/DuoImage";
-import Roadmap from "../../components/home/Roadmap";
-import Subscribe from "../../components/Subscribe";
-import Footer from "../../components/Footer";
+import React, { useState, useEffect, use } from "react";
+import Hero from "../../components/home/Hero";
 import CollectionTitle from "../../components/CollectionTitle";
+import ImageSlider from "../../components/ImageSlider";
+import AccessTypes from "../../components/home/AccessTypes";
+import Subscribe from "../../components/Subscribe";
+import VideoGrid from "../../components/home/VideoGrid";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
+import VideoSection from "../../components/home/VideoSection";
 
-import chair from "../../../public/assets/images/chair.png";
 import mani_bg from "../../../public/assets/banners/mani_bg.png";
 
 export default function HomePage() {
@@ -29,11 +26,12 @@ export default function HomePage() {
       return () => clearTimeout(timer);
     }
   }, []);
+
   return (
     <>
       <Header />
-      <div className={`relative w-full  mx-auto text-thin text-color-text`}>
-        <div className="relative w-full mx-auto">
+      <div className={`relative w-full mx-auto text-thin text-color-text`}>
+        <div className="relative w-full  mx-auto">
           <Hero desktopSrc={mani_bg} mobileSrc={mani_bg} />
           <div className="h-[100vh]"></div>
           <div
@@ -42,15 +40,27 @@ export default function HomePage() {
             }`}
           >
             <div className="py-8 md:py-4 -translate-y-[45%]">
-              <CollectionTitle isHome />
+              <CollectionTitle />
             </div>
-            <OurOrigin />
-            <div className="py-[25vh]">
-              <FullScreenMedia desktopSrc={chair} mobileSrc={chair} />
+            <div className="flex flex-col w-full justify-center items-center">
+              <h3 className="text-image mt-8">Exclussive Success.</h3>
+              <h4 className="mb-0">
+                A tribute to professionals around the globe.
+              </h4>
             </div>
-            <CoreValues />
-            <DuoImage />
-            <Roadmap />
+            <ImageSlider />
+
+            <div className="py-[25vh] flex flex-col items-center ">
+              <h3 className="italic">
+                Many dress like it.{" "}
+                <span className="text-image"> Just a few simply Are.</span>
+              </h3>
+            </div>
+            <VideoSection />
+
+            <VideoGrid />
+
+            <AccessTypes />
             <Subscribe />
             <Footer />
           </div>
