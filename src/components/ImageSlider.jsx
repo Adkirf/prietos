@@ -1,12 +1,17 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import img_1 from "../../public/assets/images/img_1.png";
-import img_2 from "../../public/assets/images/img_2.png";
-import img_3 from "../../public/assets/images/img_3.png";
 
-export default function ImageSlider() {
-  const imagesSecOne = [img_1, img_2, img_3, img_1, img_2, img_3];
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import LeaveComponenet from "../assets/LeaveComponent";
 
+export function ImageSlider({ imageSequence, autoSlide }) {
   const [swiperInstance, setSwiperInstance] = useState(null);
   const sliderRef = useRef(null);
   const [triggeredThresholds, setTriggeredThresholds] = useState({
@@ -23,7 +28,7 @@ export default function ImageSlider() {
 
   const goToLastSlide = () => {
     if (swiperInstance) {
-      swiperInstance.slideTo(imagesSecOne.length - 1);
+      swiperInstance.slideTo(imageSequence.length - 1);
     }
   };
 
@@ -85,7 +90,7 @@ export default function ImageSlider() {
         grabCursor={true}
         className="mySwiper"
       >
-        {imagesSecOne.map((item, index) => (
+        {imageSequence.map((item, index) => (
           <SwiperSlide
             key={index}
             className="!w-[70%] sm:!w-[50%]  md:max-w-[calc(33.333%-8px)] flex justify-center items-center"
@@ -98,6 +103,63 @@ export default function ImageSlider() {
           </SwiperSlide>
         ))}
       </Swiper>
+    </section>
+  );
+}
+
+export function ImageCarussel({ imageSequence }) {
+  return (
+    <section className="max-w-[100vw]">
+      <Carousel
+        opts={{
+          align: "start",
+        }}
+        className="w-full"
+      >
+        <CarouselContent>
+          {Array.from({ length: imageSequence.length }).map((_, index) => (
+            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+              <div className="p-0">
+                <Card className="p-0 m-0 !bg-black border-none text-text-primary text-thin">
+                  <CardContent className="flex flex-col items-center justify-center p-0 ">
+                    <div className="relative flex items-center justify-center">
+                      <div className="absolute flex flex-row items-center p-1 gap-1 bg-black top-2 left-2 rounded">
+                        <LeaveComponenet />
+                        {index % 2 === 0 ? (
+                          <>
+                            <p className="text-[0.5rem] md:text-[0.6rem] lg:text-[0.7rem] text-gold">
+                              SOLD OUT
+                            </p>
+                          </>
+                        ) : (
+                          <>
+                            <p className="text-thin ">499</p>
+                            <p className="text-[0.5rem] md:text-[0.6rem] lg:text-[0.7rem] self-start opacity-75">
+                              /500
+                            </p>
+                          </>
+                        )}
+                      </div>
+                      <img
+                        src={imageSequence[index]}
+                        alt={`img-${index}`}
+                        className="w-full object-cover aspect-square"
+                      />
+                    </div>
+                    <div>
+                      <p className="text-text-primary py-4">
+                        Some example name
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        {/*         <CarouselPrevious />
+        <CarouselNext /> */}
+      </Carousel>
     </section>
   );
 }

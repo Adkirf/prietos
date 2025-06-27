@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-export default function Hero({ desktopSrc, mobileSrc }) {
+export default function Hero({ isFixed = true, desktopSrc, mobileSrc }) {
   const [isScrolledPast, setIsScrolledPast] = useState(false);
 
   useEffect(() => {
@@ -14,11 +14,11 @@ export default function Hero({ desktopSrc, mobileSrc }) {
 
   return (
     <>
-      {/* Header section */}
-
       {/* mani_bg/scrollToBottom section (LandingHero) */}
       <div
-        className="fixed top-0 left-0 w-full h-[99vh] z-10 pointer-events-none"
+        className={`${
+          isFixed ? "fixed" : ""
+        } top-0 left-0 w-full h-[99vh] z-10 pointer-events-none`}
         style={{ background: isScrolledPast ? "black" : "none" }}
       >
         {!isScrolledPast && (

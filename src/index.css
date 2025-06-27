@@ -33,7 +33,6 @@ section {
   @apply p-5;
   background-color: var(--color-background);
   border-radius: var(--radius-main);
-  color: #9B9B9B
 }
 
 
@@ -70,8 +69,6 @@ h4{
   @apply text-[0.75rem] md:text-[1.0625rem] lg:text-[1.125rem] font-[300];
   letter-spacing: 0.01em;
 }
-
-
 
 .text-thin {
   @apply text-[0.8125rem] md:text-[0.9375rem] lg:text-[1rem] font-[100];

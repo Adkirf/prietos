@@ -1,7 +1,7 @@
 import React, { useState, useEffect, use } from "react";
 import Hero from "../../components/home/Hero";
 import CollectionTitle from "../../components/CollectionTitle";
-import ImageSlider from "../../components/ImageSlider";
+import { ImageSlider } from "../../components/ImageSlider";
 import AccessTypes from "../../components/home/AccessTypes";
 import Subscribe from "../../components/Subscribe";
 import VideoGrid from "../../components/home/VideoGrid";
@@ -11,8 +11,13 @@ import VideoSection from "../../components/home/VideoSection";
 
 import mani_bg from "../../../public/assets/banners/mani_bg.png";
 
+import img_1 from "../../../public/assets/images/img_1.png";
+import img_2 from "../../../public/assets/images/img_2.png";
+import img_3 from "../../../public/assets/images/img_3.png";
+
 export default function HomePage() {
   const [bounce, setBounce] = useState(false);
+  const imagesSecOne = [img_1, img_2, img_3, img_1, img_2, img_3];
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -48,7 +53,7 @@ export default function HomePage() {
                 A tribute to professionals around the globe.
               </h4>
             </div>
-            <ImageSlider />
+            <ImageSlider imageSequence={imagesSecOne} />
 
             <div className="py-[25vh] flex flex-col items-center ">
               <h3 className="italic">

@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import VisionPage from "./pages/vision/page";
 import HomePage from "./pages/home/page";
+import ExclussiveSuccessPage from "./pages/exclussive-success/page";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/vision" element={<VisionPage />} />
+        <Route path="/exclussive-success" element={<ExclussiveSuccessPage />} />
       </Routes>
     </BrowserRouter>
   );
